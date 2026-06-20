@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جستجوی ملک — انتخاب اول | خرید، رهن و اجاره در شمال تهران</title>
+<link href="https://fonts.bunny.net/css?family=fraunces:400,400i,600,700|manrope:400,500,600,700,800|vazirmatn:300,400,500,700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#2E2350; --brand-deep:#1B1535; --brand-deep-2:#241C44;
+  --accent:#B68D4C; --accent-2:#C8A363;
+  --ivory:#F6F2EA; --paper:#FBF9F5; --ink:#1A1622; --muted:#6E6880;
+  --card:#FFFFFF; --line:rgba(26,22,34,.12); --line-d:rgba(246,242,234,.16);
+  --serif:'Fraunces',Georgia,serif; --sans:'Manrope',system-ui,sans-serif; --fa:'Vazirmatn',Tahoma,sans-serif;
+  --maxw:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fa);background:var(--paper);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--ink)}
+a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--fa);font-weight:600;font-size:15px;padding:12px 24px;border-radius:9px;border:1.5px solid transparent;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)} .btn--brass{background:var(--accent);color:var(--ink)} .btn--brass:hover{background:var(--accent-2)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--accent);font-weight:600;font-size:14px}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent)}
+.mark{width:42px;height:42px;flex:none}
+.mk-sq{fill:var(--brand)} .mk-fr{stroke:var(--accent)} .mk-one{fill:var(--ivory)}
+.mark--rev .mk-sq{fill:var(--ivory)} .mark--rev .mk-fr{stroke:var(--brand)} .mark--rev .mk-one{fill:var(--brand)}
+.brand{display:flex;align-items:center;gap:13px}
+.brand__fa{font-weight:800;font-size:20px;line-height:1.1}
+.brand__en{display:block;font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-size:9.5px;color:var(--accent);font-weight:600;margin-top:3px}
+/* concept bar */
+.concept{background:var(--ink);color:var(--ivory)}
+.concept .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 24px;flex-wrap:wrap;font-family:var(--sans);font-size:12px}
+.cnav{display:flex;gap:14px;flex-wrap:wrap}.cnav a{color:rgba(246,242,234,.6)}.cnav a.on{color:var(--accent-2);font-weight:700}
+/* header */
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.menu{display:flex;gap:24px;font-size:15px;font-weight:500}
+.menu a{opacity:.78;padding-bottom:3px;border-bottom:1.5px solid transparent;transition:.2s}
+.menu a:hover,.menu a.on{opacity:1;color:var(--brand);border-color:var(--accent)}
+.nav__tel{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:14px}
+.nav__tel svg{width:15px;height:15px;color:var(--accent)}.nav__tel span{direction:ltr}
+@media(max-width:980px){.menu,.nav__tel{display:none}}
+/* page head */
+.phead{padding:26px 0 6px}
+.phead h1{font-size:clamp(22px,2.6vw,30px);font-weight:800}
+.phead .crumb{font-size:13px;color:var(--muted);margin-bottom:10px}
+.phead .crumb .sep{opacity:.4;margin:0 6px}
+/* filter bar */
+.filterbar{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 16px 40px -34px rgba(20,16,34,.5);margin:14px 0 24px}
+.seg{display:flex;gap:4px;margin-bottom:12px}
+.seg button{font-family:var(--fa);font-weight:600;font-size:14px;color:var(--muted);background:transparent;border:none;padding:9px 18px;border-radius:8px;cursor:pointer;transition:.2s}
+.seg button.active{background:var(--brand);color:var(--ivory)}
+.frow{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr .8fr auto;gap:10px}
+@media(max-width:900px){.frow{grid-template-columns:1fr 1fr}}
+.sel{border:1px solid var(--line);border-radius:9px;padding:11px 14px;font-size:14px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--paper);cursor:pointer}
+.sel small{color:var(--muted);font-size:11px;font-weight:500;display:block}
+.sel .car{color:var(--muted)}
+.frow .btn{padding:11px 26px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chip{background:color-mix(in srgb,var(--brand) 7%,transparent);border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;display:flex;gap:7px;align-items:center}
+.chip i{cursor:pointer;color:var(--muted);font-style:normal}
+.chip .clr{color:var(--accent);font-weight:600;cursor:pointer}
+/* subbar */
+.subbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;flex-wrap:wrap;gap:12px}
+.subbar .cnt{font-weight:700;font-size:16px}.subbar .cnt span{color:var(--muted);font-weight:400;font-size:14px}
+.tools{display:flex;gap:10px;align-items:center}
+.sortsel,.viewt{border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:13.5px;background:var(--card);cursor:pointer}
+.viewt b{color:var(--brand)}
+/* split */
+.splash{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start;padding-bottom:90px}
+@media(max-width:1000px){.splash{grid-template-columns:1fr}}
+.results{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:560px){.results{grid-template-columns:1fr}}
+.mapcol{position:sticky;top:94px;display:grid;gap:16px}
+@media(max-width:1000px){.mapcol{position:static}.smap{height:300px!important}}
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -32px rgba(20,16,34,.45)}
+.card__media{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--brand-deep)}
+.card__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.55s}
+.card:hover .card__media img{transform:scale(1.05)}
+.badge{position:absolute;top:13px;inset-inline-start:13px;background:rgba(246,242,234,.94);color:var(--ink);font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;z-index:2}
+.badge.brass{background:var(--accent);inset-inline-start:auto;inset-inline-end:13px}
+.card__body{padding:17px}
+.card__loc{font-size:13px;color:var(--muted);margin-bottom:5px}
+.card__title{font-weight:700;font-size:16px;line-height:1.5;margin-bottom:11px}
+.card:hover .card__title{color:var(--brand)}
+.card__price{font-weight:800;font-size:18px}.card__price span{font-size:12px;color:var(--muted);font-weight:500}
+.card__specs{display:flex;gap:8px;color:var(--muted);font-size:13px;margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.card__specs span:not(:first-child)::before{content:"·";margin-inline-end:8px;color:var(--line)}
+/* map */
+.smap{height:440px;border-radius:16px;border:1px solid var(--line);position:relative;overflow:hidden;background:
+  linear-gradient(0deg,rgba(46,35,80,.04),rgba(46,35,80,.04)),
+  repeating-linear-gradient(0deg,transparent 0 40px,rgba(26,22,34,.045) 40px 41px),
+  repeating-linear-gradient(90deg,transparent 0 40px,rgba(26,22,34,.045) 40px 41px),var(--paper)}
+.pin2{position:absolute;background:var(--ink);color:var(--ivory);font-size:12px;font-weight:700;padding:5px 11px;border-radius:20px;transform:translate(50%,-50%);box-shadow:0 8px 18px -8px rgba(0,0,0,.6);border:1.5px solid var(--ivory);white-space:nowrap}
+.pin2.act{background:var(--accent);color:var(--ink)}
+.smap .lbl{position:absolute;bottom:12px;inset-inline-start:14px;font-family:var(--sans);font-size:11px;color:var(--muted);background:var(--card);padding:5px 10px;border-radius:20px;border:1px solid var(--line)}
+/* converter */
+.conv{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:20px}
+.conv .tg{display:inline-block;font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.02em;margin-bottom:8px}
+.conv h3{font-size:15.5px;font-weight:700;margin-bottom:3px}
+.conv .sub{font-size:12px;color:var(--muted);margin-bottom:15px}
+.conv .cv{display:flex;align-items:center;gap:10px}
+.conv .f{flex:1;border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:var(--paper)}
+.conv .f label{display:block;font-size:11px;color:var(--muted);margin-bottom:2px}.conv .f b{font-size:15px;font-weight:800}
+.conv .swp{width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--ivory);display:flex;align-items:center;justify-content:center;flex:none;font-size:15px}
+.conv .rate{font-size:11.5px;color:var(--muted);margin-top:13px;text-align:center}
+/* footer */
+footer{background:var(--ink);color:rgba(246,242,234,.66)}
+footer .wrap{padding:48px 24px 26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(246,242,234,.5)}
+</style>
+</head>
+<body>
+
+<div class="concept"><div class="wrap">
+  <span style="opacity:.7">نمونهٔ صفحهٔ جستجو · Search concept</span>
+  <nav class="cnav">
+    <a href="art-direction.html">صفحهٔ اصلی</a><a href="listing.html">جزئیات ملک</a>
+    <a class="on" href="search.html">جستجو</a><a href="diplomatic.html">بین‌الملل</a><a href="submit.html">سپردن ملک</a>
+  </nav>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="art-direction.html">
+    <svg class="mark" viewBox="0 0 120 120"><rect class="mk-sq" x="4" y="4" width="112" height="112" rx="12"/><rect class="mk-fr" x="13" y="13" width="94" height="94" rx="7" fill="none" stroke-width="1.4" opacity=".85"/><path class="mk-one" d="M69 30 L69 84 L80 84 L80 92 L40 92 L40 84 L55 84 L55 47 L41 52 Z"/></svg>
+    <span><span class="brand__fa">انتخاب اول</span><span class="brand__en">First Choice · Real Estate</span></span>
+  </a>
+  <nav class="menu"><a class="on" href="#">خرید و فروش</a><a href="#">رهن و اجاره</a><a href="#">محله‌ها</a><a href="diplomatic.html">خدمات بین‌الملل</a><a href="#">درباره ما</a></nav>
+  <a class="nav__tel" href="tel:+982122000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>۰۲۱ ۲۲۰۰ ۰۰۰۰</span></a>
+</div></header>
+
+<div class="wrap">
+  <div class="phead">
+    <div class="crumb"><a href="#">خانه</a><span class="sep">›</span><a href="#">خرید</a><span class="sep">›</span>شمال تهران</div>
+    <h1>خرید آپارتمان در شمال تهران</h1>
+  </div>
+
+  <div class="filterbar">
+    <div class="seg">
+      <button class="active">خرید</button><button>رهن و اجاره</button><button>رهن کامل</button>
+    </div>
+    <div class="frow">
+      <div class="sel"><span><small>محله / منطقه</small>زعفرانیه، الهیه</span><span class="car">▾</span></div>
+      <div class="sel"><span><small>نوع ملک</small>آپارتمان</span><span class="car">▾</span></div>
+      <div class="sel"><span><small>بودجه (تومان)</small>تا ۴۰ میلیارد</span><span class="car">▾</span></div>
+      <div class="sel"><span><small>متراژ</small>۱۵۰ تا ۳۰۰</span><span class="car">▾</span></div>
+      <div class="sel"><span><small>خواب</small>۳+</span><span class="car">▾</span></div>
+      <button class="btn btn--brass">جستجو</button>
+    </div>
+    <div class="chips">
+      <span class="chip">زعفرانیه <i>✕</i></span>
+      <span class="chip">الهیه <i>✕</i></span>
+      <span class="chip">آپارتمان <i>✕</i></span>
+      <span class="chip">۳+ خواب <i>✕</i></span>
+      <span class="clr">پاک کردن همه</span>
+    </div>
+  </div>
+
+  <div class="subbar">
+    <div class="cnt">۱۲۴ ملک <span>در زعفرانیه و الهیه</span></div>
+    <div class="tools">
+      <div class="sortsel">مرتب‌سازی: جدیدترین ▾</div>
+      <div class="viewt">نمایش: <b>لیست + نقشه</b> ▾</div>
+    </div>
+  </div>
+
+  <div class="splash">
+    <!-- results -->
+    <div class="results">
+      <a class="card"><div class="card__media"><img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=700&q=62&auto=format&fit=crop" alt=""><span class="badge">فروش</span><span class="badge brass">ویژه</span></div>
+        <div class="card__body"><div class="card__loc">زعفرانیه</div><div class="card__title">آپارتمان ۲۱۰ متری با ویوی شهر</div><div class="card__price">۳۲٬۰۰۰٬۰۰۰٬۰۰۰ <span>تومان</span></div><div class="card__specs"><span>۲۱۰ متر</span><span>۳ خواب</span><span>طبقه ۴</span></div></div></a>
+
+      <a class="card"><div class="card__media"><img src="https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?auto=compress&cs=tinysrgb&w=700" alt=""><span class="badge">فروش</span></div>
+        <div class="card__body"><div class="card__loc">زعفرانیه</div><div class="card__title">آپارتمان ۱۸۵ متری، فول امکانات</div><div class="card__price">۲۷٬۵۰۰٬۰۰۰٬۰۰۰ <span>تومان</span></div><div class="card__specs"><span>۱۸۵ متر</span><span>۳ خواب</span><span>طبقه ۶</span></div></div></a>
+
+      <a class="card"><div class="card__media"><img src="https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=700" alt=""><span class="badge">رهن و اجاره</span><span class="badge brass">مبله</span></div>
+        <div class="card__body"><div class="card__loc">الهیه</div><div class="card__title">پنت‌هاوس ۳۲۰ متری، تراس و استخر</div><div class="card__price">ودیعه ۸ میلیارد <span>/ ۱۵۰ م</span></div><div class="card__specs"><span>۳۲۰ متر</span><span>۴ خواب</span><span>طبقه ۸</span></div></div></a>
+
+      <a class="card"><div class="card__media"><img src="https://images.unsplash.com/photo-1612965607446-25e1332775ae?w=700&q=62&auto=format&fit=crop" alt=""><span class="badge">فروش</span></div>
+        <div class="card__body"><div class="card__loc">الهیه</div><div class="card__title">آپارتمان ۲۴۰ متری، بازسازی‌شده</div><div class="card__price">۳۸٬۰۰۰٬۰۰۰٬۰۰۰ <span>تومان</span></div><div class="card__specs"><span>۲۴۰ متر</span><span>۳ خواب</span><span>طبقه ۵</span></div></div></a>
+
+      <a class="card"><div class="card__media"><img src="https://images.pexels.com/photos/6585757/pexels-photo-6585757.jpeg?auto=compress&cs=tinysrgb&w=700" alt=""><span class="badge">رهن و اجاره</span></div>
+        <div class="card__body"><div class="card__loc">زعفرانیه</div><div class="card__title">آپارتمان ۱۶۰ متری، نورگیر</div><div class="card__price">ودیعه ۴ میلیارد <span>/ ۸۵ م</span></div><div class="card__specs"><span>۱۶۰ متر</span><span>۲ خواب</span><span>طبقه ۳</span></div></div></a>
+
+      <a class="card"><div class="card__media"><img src="https://images.unsplash.com/photo-1648881806148-e5c51179c826?w=700&q=60&auto=format&fit=crop" alt=""><span class="badge">اختصاصی</span><span class="badge brass">Off-market</span></div>
+        <div class="card__body"><div class="card__loc">نیاوران</div><div class="card__title">ویلا-آپارتمان لوکس، حیاط اختصاصی</div><div class="card__price">قیمت با درخواست</div><div class="card__specs"><span>۴۵۰ متر</span><span>۵ خواب</span><span>۲ طبقه</span></div></div></a>
+    </div>
+
+    <!-- map + tools -->
+    <div class="mapcol">
+      <div class="conv">
+        <span class="tg">ابزار · مخصوص رهن و اجاره</span>
+        <h3>تبدیل رهن و اجاره</h3>
+        <div class="sub">ودیعه و اجاره را به هم تبدیل کنید</div>
+        <div class="cv">
+          <div class="f"><label>ودیعه (رهن)</label><b>۱٬۰۰۰٬۰۰۰٬۰۰۰</b></div>
+          <div class="swp">⇄</div>
+          <div class="f"><label>اجاره ماهانه</label><b>۳۰٬۰۰۰٬۰۰۰</b></div>
+        </div>
+        <div class="rate">نرخ تبدیل: هر ۱ میلیون ودیعه ≈ ۳۰ هزار تومان اجاره (قابل تنظیم)</div>
+      </div>
+
+      <div class="smap">
+        <span class="pin2 act" style="top:34%;right:40%">۳۲ میلیارد</span>
+        <span class="pin2" style="top:52%;right:24%">۲۷.۵</span>
+        <span class="pin2" style="top:44%;right:62%">ودیعه ۸ م</span>
+        <span class="pin2" style="top:66%;right:48%">۳۸ میلیارد</span>
+        <span class="pin2" style="top:28%;right:70%">ودیعه ۴ م</span>
+        <span class="lbl">نقشهٔ نشان — ۱۲۴ ملک در این محدوده</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <a class="brand" href="art-direction.html"><svg class="mark mark--rev" viewBox="0 0 120 120"><rect class="mk-sq" x="4" y="4" width="112" height="112" rx="12"/><rect class="mk-fr" x="13" y="13" width="94" height="94" rx="7" fill="none" stroke-width="1.4"/><path class="mk-one" d="M69 30 L69 84 L80 84 L80 92 L40 92 L40 84 L55 84 L55 47 L41 52 Z"/></svg><span class="brand__fa">انتخاب اول</span></a>
+  <small>© انتخاب اول · First Choice Real Estate — ۱۴۰۵</small>
+</div></footer>
+
+</body>
+</html>
