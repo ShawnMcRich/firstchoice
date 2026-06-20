@@ -7,6 +7,7 @@ Last updated: 2026-06-21 · Status: pre-build (art direction for approval)
 
 ## 1. The business
 - Established **~۱۳۸۳ / 2004** (20+ years). Tehran agency, strong north-Tehran / luxury focus.
+- **Public identity / contact:** Public domain **firstchoiceco.com** (note: GitHub repo is `firstchoice`). Office: No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3, Tehran — کدپستی **1915684831**. Phones: 021-2204-1212 · 021-2202-1616 · 021-2205-3232 · 021-2205-6621 · mobile 0912-108-1212. Email: **property@firstchoiceco.com**.
 - Three service lines:
   1. **Buy / sell & rent** — خرید و فروش، رهن و اجاره، رهن کامل.
   2. **Flagship — Diplomatic & Corporate Relocation:** housing diplomats, consular staff, and foreign-company employees during their posting in Tehran. High-value, high-trust, almost zero online competition in English.

@@ -9,110 +9,114 @@
 :root{
   --brand:#2E2350; --brand-deep:#1B1535; --brand-deep-2:#241C44;
   --accent:#B68D4C; --accent-2:#C8A363;
-  --ivory:#F6F2EA; --paper:#FBF9F5; --ink:#1A1622; --muted:#6E6880;
-  --card:#FFFFFF; --line:rgba(26,22,34,.12); --line-d:rgba(246,242,234,.16);
+  --ivory:#F6F2EA; --paper:#FBF9F5; --ink:#1A1622; --muted:#5F5970; --body:#423C52;
+  --card:#FFFFFF; --line:rgba(26,22,34,.12); --line-d:rgba(246,242,234,.18);
   --serif:'Fraunces',Georgia,serif; --sans:'Manrope',system-ui,sans-serif; --fa:'Vazirmatn',Tahoma,sans-serif;
   --maxw:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--accent);color:var(--ink)}
 a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-section{padding:clamp(56px,7vw,104px) 0}
+section{padding:clamp(54px,7vw,100px) 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:600;font-size:15px;padding:13px 26px;border-radius:9px;border:1.5px solid transparent;cursor:pointer;transition:.2s}
-.btn:hover{transform:translateY(-2px)} .btn--brass{background:var(--accent);color:var(--ink)} .btn--brass:hover{background:var(--accent-2)}
-.btn--ghost{border-color:var(--accent);color:var(--accent)} .btn--ghost:hover{background:var(--accent);color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.btn--brass{background:var(--accent);color:var(--ink)} .btn--brass:hover{background:var(--accent-2)}
+.btn--lite{border-color:rgba(246,242,234,.45);color:var(--ivory)} .btn--lite:hover{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
 .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:600;color:var(--accent)}
-.serif{font-family:var(--serif)}
-h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.15}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.16}
 .mark{width:42px;height:42px;flex:none}
 .mk-sq{fill:var(--brand)} .mk-fr{stroke:var(--accent)} .mk-one{fill:var(--ivory)}
 .mark--rev .mk-sq{fill:var(--ivory)} .mark--rev .mk-fr{stroke:var(--brand)} .mark--rev .mk-one{fill:var(--brand)}
 .brand{display:flex;align-items:center;gap:13px}
-.brand__en{font-family:var(--sans);font-weight:800;font-size:16px;letter-spacing:.01em;line-height:1.1}
+.brand__en{font-family:var(--sans);font-weight:800;font-size:16px;line-height:1.1}
 .brand__fa{display:block;font-family:var(--fa);font-size:12px;color:var(--accent);font-weight:700;margin-top:2px}
 /* concept bar */
 .concept{background:var(--ink);color:var(--ivory)}
-.concept .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 24px;flex-wrap:wrap;font-size:12px}
+.concept .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 24px;flex-wrap:wrap;font-size:12px}
 .cnav{display:flex;gap:14px;flex-wrap:wrap}.cnav a{color:rgba(246,242,234,.6)}.cnav a.on{color:var(--accent-2);font-weight:700}
 /* header */
 header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
-.menu{display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.menu{display:flex;gap:24px;font-size:15px;font-weight:500}
 .menu a{opacity:.78;padding-bottom:3px;border-bottom:1.5px solid transparent;transition:.2s}
 .menu a:hover,.menu a.on{opacity:1;color:var(--brand);border-color:var(--accent)}
-.nav__right{display:flex;align-items:center;gap:16px}
+.nav__right{display:flex;align-items:center;gap:14px}
 .lang{font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:inline-flex}
 .lang b{padding:6px 11px} .lang .on{background:var(--brand);color:var(--ivory)}
 @media(max-width:980px){.menu{display:none}}
-/* hero */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:72vh;align-items:center;gap:0}
-.hero__text{padding:clamp(28px,4vw,40px) clamp(28px,5vw,70px) clamp(28px,4vw,40px) 0}
-.hero h1{font-size:clamp(34px,4.6vw,60px);margin:18px 0 18px}
-.hero h1 em{font-style:italic;color:var(--brand)}
-.hero p{font-size:clamp(16px,1.5vw,19px);color:var(--muted);max-width:46ch;margin-bottom:28px}
+@media(max-width:520px){.lang{display:none}}
+/* hero (contained, dark, cinematic) */
+.hero{position:relative;background:var(--ink);color:var(--ivory);overflow:hidden}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,16,34,.9),rgba(20,16,34,.55) 60%,rgba(20,16,34,.35))}
+.hero .wrap{position:relative;z-index:2;padding-top:clamp(64px,12vw,140px);padding-bottom:clamp(64px,12vw,140px)}
+.hero h1{font-size:clamp(33px,5vw,58px);color:var(--ivory);margin:18px 0 18px;max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--accent-2)}
+.hero p{font-size:clamp(16px,1.6vw,19px);color:rgba(246,242,234,.9);max-width:52ch;margin-bottom:30px}
 .hero__cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero__media{position:relative;height:100%;min-height:360px;overflow:hidden}
-.hero__media img{width:100%;height:100%;object-fit:cover}
-.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--paper),transparent 22%)}
-@media(max-width:840px){.hero{grid-template-columns:1fr}.hero__text{padding:40px 24px}.hero__media{min-height:46vh}.hero__media::after{background:linear-gradient(0deg,rgba(20,16,30,.35),transparent 45%)}}
 /* trust strip */
 .tstrip{background:var(--brand);color:var(--ivory)}
-.tstrip .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding:26px 24px;align-items:center}
-.tstrip div b{font-size:24px;font-family:var(--serif);font-weight:600;display:block}
-.tstrip div span{font-size:12.5px;color:rgba(246,242,234,.7)}
+.tstrip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:26px 24px}
+@media(max-width:720px){.tstrip .wrap{grid-template-columns:1fr 1fr}}
+.tstrip div b{font-size:23px;font-family:var(--serif);font-weight:600;display:block}
+.tstrip div span{font-size:12.5px;color:rgba(246,242,234,.72)}
 /* section head */
 .sh{max-width:620px;margin-bottom:46px}
 .sh h2{font-size:clamp(26px,3.2vw,40px);margin:14px 0 12px}
-.sh p{color:var(--muted);font-size:16.5px}
+.sh p{color:var(--body);font-size:16.5px}
 /* services */
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:820px){.svc{grid-template-columns:1fr 1fr}}@media(max-width:520px){.svc{grid-template-columns:1fr}}
 .svc .it{border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--card);transition:.25s}
 .svc .it:hover{transform:translateY(-4px);box-shadow:0 24px 50px -36px rgba(20,16,34,.4)}
 .svc .it .ic{width:34px;height:2px;background:var(--accent);margin-bottom:18px}
 .svc .it h3{font-family:var(--sans);font-weight:700;font-size:17px;margin-bottom:8px}
-.svc .it p{font-size:14.5px;color:var(--muted)}
+.svc .it p{font-size:14.5px;color:var(--body)}
 /* process */
 .proc{background:linear-gradient(135deg,var(--brand-deep),var(--ink));color:var(--ivory)}
-.proc .sh h2{color:var(--ivory)} .proc .sh p{color:rgba(246,242,234,.7)}
+.proc .sh h2{color:var(--ivory)} .proc .sh p{color:rgba(246,242,234,.72)}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
 @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{padding-top:18px;border-top:1px solid var(--line-d)}
 .step .n{font-family:var(--serif);font-size:30px;color:var(--accent-2);margin-bottom:10px}
 .step h3{font-family:var(--sans);font-weight:700;font-size:16px;margin-bottom:6px;color:var(--ivory)}
-.step p{font-size:13.5px;color:rgba(246,242,234,.72)}
-.step{padding-top:18px;border-top:1px solid var(--line-d)}
+.step p{font-size:13.5px;color:rgba(246,242,234,.78)}
 /* belt */
 .belt{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 @media(max-width:820px){.belt{grid-template-columns:1fr;gap:30px}}
-.belt ul{list-style:none;columns:2;gap:10px}
-.belt li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px;display:flex;justify-content:space-between}
-.belt li span{color:var(--muted);font-size:13px}
+.belt ul{list-style:none}
+.belt li{padding:11px 0;border-bottom:1px solid var(--line);font-size:15.5px;display:flex;justify-content:space-between;align-items:center}
+.belt li span{color:var(--muted);font-size:13px;font-family:var(--fa)}
 .belt .ph{border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:var(--brand-deep)}
 .belt .ph img{width:100%;height:100%;object-fit:cover}
 /* quote */
 .quote{background:var(--ivory);text-align:center}
-.quote .wrap{max-width:840px}
-.quote p{font-family:var(--serif);font-size:clamp(22px,3vw,33px);line-height:1.4;font-style:italic}
+.quote .wrap{max-width:860px}
+.quote p{font-family:var(--serif);font-size:clamp(21px,3vw,32px);line-height:1.4;font-style:italic;color:var(--ink)}
 .quote cite{display:block;margin-top:24px;font-family:var(--sans);font-style:normal;font-size:14px;color:var(--muted);letter-spacing:.02em}
 /* enquiry */
-.enq{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:start}
+.enq{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}
 @media(max-width:820px){.enq{grid-template-columns:1fr;gap:32px}}
-.form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;box-shadow:0 26px 60px -44px rgba(20,16,34,.5)}
+.enq h2{font-size:clamp(26px,3vw,38px);margin:14px 0 14px}
+.enq p{color:var(--body);font-size:16px}
+.contactline{margin-top:22px;font-size:14.5px;color:var(--body);line-height:2}
+.contactline b{color:var(--ink)}
+.form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4vw,32px);box-shadow:0 26px 60px -44px rgba(20,16,34,.5)}
 .form .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:520px){.form .grid2{grid-template-columns:1fr}}
 .form label{display:block;font-size:12.5px;color:var(--muted);margin:14px 0 6px}
 .form input,.form textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:12px 14px;font-family:var(--sans);font-size:14.5px;background:var(--paper);outline:none}
 .form input:focus,.form textarea:focus{border-color:var(--accent)}
 .form .note{font-size:12px;color:var(--muted);margin-top:14px}
 /* footer */
-footer{background:var(--ink);color:rgba(246,242,234,.66)}
+footer{background:var(--ink);color:rgba(246,242,234,.7)}
 footer .wrap{padding:60px 24px 30px}
-.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-d)}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-d)}
 @media(max-width:680px){.foot{grid-template-columns:1fr}}
 .foot h6{color:var(--ivory);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
-.foot a,.foot p{display:block;font-size:14px;margin-bottom:10px;color:rgba(246,242,234,.66)}
+.foot a,.foot p{display:block;font-size:14px;margin-bottom:10px;color:rgba(246,242,234,.7);line-height:1.7}
 .foot a:hover{color:var(--accent-2)} .foot .brand__en{color:var(--ivory)}
 .foot__bot{padding-top:22px;font-size:12.5px;color:rgba(246,242,234,.5)}
 </style>
@@ -120,7 +124,7 @@ footer .wrap{padding:60px 24px 30px}
 <body>
 
 <div class="concept"><div class="wrap">
-  <span style="opacity:.7">Diplomatic page concept · English-first side of the bilingual site</span>
+  <span style="opacity:.7">Diplomatic page · English-first side of the bilingual site</span>
   <nav class="cnav">
     <a href="art-direction.html">Home</a><a href="listing.html">Listing</a>
     <a href="search.html">Search</a><a class="on" href="diplomatic.html">Diplomatic</a><a href="submit.html">List property</a>
@@ -136,14 +140,14 @@ footer .wrap{padding:60px 24px 30px}
   <div class="nav__right"><span class="lang"><b>FA</b><b class="on">EN</b></span><a class="btn btn--brass" href="#enquiry">Private enquiry</a></div>
 </div></header>
 
-<section class="hero" style="padding:0">
-  <div class="hero__text">
+<section class="hero">
+  <img class="hero__bg" src="https://images.pexels.com/photos/8082227/pexels-photo-8082227.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="An elegant, classically appointed Tehran residence">
+  <div class="wrap">
     <span class="eyebrow">Diplomatic &amp; Corporate Relocation</span>
     <h1>A home in Tehran, <em>handled with discretion.</em></h1>
     <p>For over twenty years, First Choice has placed diplomats, consular staff and international executives in Tehran's finest neighborhoods — quietly, and end to end.</p>
-    <div class="hero__cta"><a class="btn btn--brass" href="#enquiry">Make a private enquiry</a><a class="btn btn--ghost" href="#how">How it works</a></div>
+    <div class="hero__cta"><a class="btn btn--brass" href="#enquiry">Make a private enquiry</a><a class="btn btn--lite" href="#how">How it works</a></div>
   </div>
-  <div class="hero__media"><img src="https://images.pexels.com/photos/8082227/pexels-photo-8082227.jpeg?auto=compress&cs=tinysrgb&w=1300" alt="An elegant, classically appointed Tehran residence"></div>
 </section>
 
 <div class="tstrip"><div class="wrap">
@@ -158,7 +162,7 @@ footer .wrap{padding:60px 24px 30px}
   <div class="svc">
     <div class="it"><div class="ic"></div><h3>Furnished &amp; serviced homes</h3><p>Move-in-ready residences with the standard and security an international posting requires.</p></div>
     <div class="it"><div class="ic"></div><h3>Short &amp; medium-term leases</h3><p>Lease lengths matched to your posting, with renewals handled ahead of time.</p></div>
-    <div class="it"><div class="ic"></div><h3>English contracts &amp; negotiation</h3><p>Clear bilingual contracts, fair terms negotiated on your behalf, registered (کد رهگیری).</p></div>
+    <div class="it"><div class="ic"></div><h3>English contracts &amp; negotiation</h3><p>Clear bilingual contracts, fair terms negotiated for you, and properly registered (کد رهگیری).</p></div>
     <div class="it"><div class="ic"></div><h3>Off-market &amp; discreet listings</h3><p>A private collection shown only to qualified clients — names and addresses protected.</p></div>
     <div class="it"><div class="ic"></div><h3>Embassy-belt expertise</h3><p>Homes near missions, international schools and foreign-friendly healthcare in north Tehran.</p></div>
     <div class="it"><div class="ic"></div><h3>Settling-in support</h3><p>Utilities, internet, household setup and area orientation — sorted before you arrive.</p></div>
@@ -189,7 +193,7 @@ footer .wrap{padding:60px 24px 30px}
         <li>Aghdasiyeh <span>اقدسیه</span></li>
         <li>Velenjak <span>ولنجک</span></li>
       </ul>
-      <p style="color:var(--muted);font-size:14.5px;margin-top:18px">Chosen for proximity to embassies, international schools and quiet, secure streets.</p>
+      <p style="color:var(--body);font-size:14.5px;margin-top:18px">Chosen for proximity to embassies, international schools and quiet, secure streets.</p>
     </div>
     <div class="ph"><img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=900&q=66&auto=format&fit=crop" alt="A north-Tehran residence at dusk"></div>
   </div>
@@ -204,9 +208,14 @@ footer .wrap{padding:60px 24px 30px}
   <div class="enq">
     <div>
       <span class="eyebrow">Private enquiry</span>
-      <h2 style="font-size:clamp(26px,3vw,38px);margin:14px 0 14px">Tell us what you need.</h2>
-      <p style="color:var(--muted);font-size:16px">Share a few details and our international team will respond personally — in confidence, in English or Persian. For missions and companies, we're happy to sign an NDA.</p>
-      <p style="color:var(--muted);font-size:14px;margin-top:22px">Or reach us directly:<br><b style="color:var(--ink)">relocation@firstchoice.ir</b> · +98 21 2200 0000</p>
+      <h2>Tell us what you need.</h2>
+      <p>Share a few details and our international team will respond personally — in confidence, in English or Persian. For missions and companies, we're happy to sign an NDA.</p>
+      <div class="contactline">
+        Or reach us directly:<br>
+        <b>property@firstchoiceco.com</b><br>
+        <b>+98 21 2204 1212</b> · +98 912 108 1212<br>
+        No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, Tehran
+      </div>
     </div>
     <form class="form" onsubmit="return false">
       <div class="grid2">
@@ -229,10 +238,15 @@ footer .wrap{padding:60px 24px 30px}
   <div class="foot">
     <div>
       <a class="brand" href="art-direction.html"><svg class="mark mark--rev" viewBox="0 0 120 120"><rect class="mk-sq" x="4" y="4" width="112" height="112" rx="12"/><rect class="mk-fr" x="13" y="13" width="94" height="94" rx="7" fill="none" stroke-width="1.4"/><path class="mk-one" d="M69 30 L69 84 L80 84 L80 92 L40 92 L40 84 L55 84 L55 47 L41 52 Z"/></svg><span><span class="brand__en">First Choice</span><span class="brand__fa">انتخاب اول · املاک</span></span></a>
-      <p style="margin-top:16px;max-width:34ch;line-height:1.7">Discreet, fully-managed home-finding for diplomatic missions and international companies in Tehran — since 2004.</p>
+      <p style="margin-top:16px;max-width:34ch">Discreet, fully-managed home-finding for diplomatic missions and international companies in Tehran — since 2004.</p>
     </div>
     <div><h6>Services</h6><a href="#">Diplomatic relocation</a><a href="#">Corporate housing</a><a href="#">Off-market homes</a><a href="#">Buy &amp; rent</a></div>
-    <div><h6>Contact</h6><p>North Tehran, Iran</p><a href="tel:+982122000000" style="direction:ltr">+98 21 2200 0000</a><a href="#">WhatsApp · Telegram</a><a href="#">relocation@firstchoice.ir</a></div>
+    <div><h6>Contact</h6>
+      <p>No. 24, East Nahid Blvd,<br>Africa St (Jordan), Amanieh,<br>District 3, Tehran 1915684831</p>
+      <a href="tel:+982122041212" style="direction:ltr">+98 21 2204 1212</a>
+      <a href="mailto:property@firstchoiceco.com">property@firstchoiceco.com</a>
+      <a href="https://firstchoiceco.com">firstchoiceco.com</a>
+    </div>
   </div>
   <div class="foot__bot">© First Choice · انتخاب اول — Real Estate, Tehran</div>
 </div></footer>
