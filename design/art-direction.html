@@ -78,7 +78,7 @@ header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--p
 @media(max-width:980px){.menu,.nav__tel{display:none}}
 
 /* ---------- hero: editorial split ---------- */
-.hero{display:grid;grid-template-columns:.92fr 1.08fr;min-height:86svh;background:var(--paper)}
+.hero{display:grid;grid-template-columns:.92fr 1.08fr;min-height:86svh;background:var(--paper);padding:0}
 .hero__text{display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,5vw,76px)}
 .hero__text .eyebrow{margin-bottom:24px}
 .hero h1{font-family:var(--fa);font-weight:800;font-size:clamp(33px,4.6vw,62px);line-height:1.15;letter-spacing:-.015em;margin-bottom:16px}
@@ -104,12 +104,7 @@ header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--p
 .hero__tag{position:absolute;bottom:22px;inset-inline-start:22px;z-index:2;display:flex;gap:9px;align-items:center;color:var(--ivory);font-size:13px;background:rgba(20,16,30,.4);backdrop-filter:blur(6px);border:1px solid rgba(246,242,234,.2);padding:8px 15px;border-radius:30px}
 .hero__tag b{font-weight:700}
 .hero__tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent-2)}
-/* alborz ridgeline signature */
-.ridge{background:var(--paper);padding:7px 0;color:var(--accent)}
-.ridge svg{display:block;width:100%;height:32px}
-.ridge polyline{fill:none;stroke:currentColor}
-.ridge .r1{stroke-width:1.5;opacity:.9}
-.ridge .r2{stroke-width:1;opacity:.4}
+/* (ridgeline removed) */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;min-height:auto}
   .hero__text{padding:44px 24px}
@@ -289,14 +284,6 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
     <div class="hero__tag"><span class="dot"></span><b>زعفرانیه</b> · فروش · ۲۱۰ متر</div>
   </div>
 </section>
-
-<!-- alborz ridgeline signature -->
-<div class="ridge" aria-hidden="true">
-  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-    <polyline class="r2" points="0,56 200,48 400,52 600,44 800,50 1000,42 1200,50 1440,52" vector-effect="non-scaling-stroke"/>
-    <polyline class="r1" points="0,52 120,40 240,46 360,30 480,42 600,26 720,40 840,34 960,44 1040,22 1080,8 1120,22 1240,40 1320,30 1440,46" vector-effect="non-scaling-stroke"/>
-  </svg>
-</div>
 
 <!-- featured listings -->
 <section id="listings"><div class="wrap">
