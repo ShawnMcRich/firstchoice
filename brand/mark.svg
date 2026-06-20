@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="First Choice — انتخاب اول">
+  <title>First Choice Real Estate — انتخاب اول</title>
+  <!-- Refreshed mark: keeps the heritage "1-in-a-square", upgraded to aubergine + brass + ivory -->
+  <rect x="4" y="4" width="112" height="112" rx="12" fill="#2E2350"/>
+  <rect x="13" y="13" width="94" height="94" rx="7" fill="none" stroke="#B68D4C" stroke-width="1.4" opacity="0.85"/>
+  <path d="M69 30 L69 84 L80 84 L80 92 L40 92 L40 84 L55 84 L55 47 L41 52 Z" fill="#F6F2EA"/>
+</svg>
