@@ -28,7 +28,6 @@ img{max-width:100%;display:block}
 section{padding:clamp(60px,8vw,116px) 0}
 
 /* ---------- type ---------- */
-.h1{font-family:var(--fa);font-weight:800;font-size:clamp(30px,5vw,58px);line-height:1.18;letter-spacing:-.01em}
 .h2{font-family:var(--fa);font-weight:800;font-size:clamp(24px,3.4vw,42px);line-height:1.22}
 .lead{font-size:clamp(16px,1.6vw,20px);color:var(--muted);font-weight:400;max-width:54ch}
 .display-en{font-family:var(--serif);font-weight:600}
@@ -43,10 +42,9 @@ section{padding:clamp(60px,8vw,116px) 0}
 .btn--brass:hover{background:var(--accent-2)}
 .btn--ghost{border-color:var(--accent);color:var(--accent);background:transparent}
 .btn--ghost:hover{background:var(--accent);color:var(--ink)}
-.btn--ink{background:var(--ink);color:var(--ivory)}
 
 /* ---------- logo mark ---------- */
-.mark{width:46px;height:46px;flex:none}
+.mark{width:42px;height:42px;flex:none}
 .mk-sq{fill:var(--brand)} .mk-fr{stroke:var(--accent)} .mk-one{fill:var(--ivory)}
 .mark--mono .mk-sq{fill:none;stroke:var(--ink);stroke-width:3} .mark--mono .mk-fr{display:none} .mark--mono .mk-one{fill:var(--ink)}
 .mark--rev .mk-sq{fill:var(--ivory)} .mark--rev .mk-fr{stroke:var(--brand)} .mark--rev .mk-one{fill:var(--brand)}
@@ -54,7 +52,7 @@ section{padding:clamp(60px,8vw,116px) 0}
 .brand__fa{font-weight:800;font-size:20px;line-height:1.1;letter-spacing:-.01em}
 .brand__en{display:block;font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-size:9.5px;color:var(--accent);font-weight:600;margin-top:3px}
 
-/* ---------- concept top bar ---------- */
+/* ---------- concept top bar + palette switcher ---------- */
 .concept{background:var(--ink);color:var(--ivory)}
 .concept .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
 .concept__label{font-size:12px;opacity:.78;font-family:var(--sans);letter-spacing:.04em}
@@ -64,43 +62,59 @@ section{padding:clamp(60px,8vw,116px) 0}
 .pal:hover{border-color:var(--accent)}
 .pal.active{background:var(--accent);color:var(--ink);border-color:var(--accent)}
 
-/* ---------- header ---------- */
-header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:24px}
-.menu{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500}
-.menu a{position:relative;color:var(--ink);opacity:.82;transition:.2s}
-.menu a:hover{opacity:1;color:var(--brand)}
-.nav__right{display:flex;align-items:center;gap:16px}
-.lang{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.lang b{padding:6px 11px;display:inline-block}
+/* ---------- header (editorial) ---------- */
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.menu{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:500}
+.menu a{color:var(--ink);opacity:.78;transition:.2s;padding-bottom:3px;border-bottom:1.5px solid transparent}
+.menu a:hover{opacity:1;color:var(--brand);border-color:var(--accent)}
+.nav__right{display:flex;align-items:center;gap:18px}
+.nav__tel{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:14px;color:var(--ink)}
+.nav__tel svg{width:15px;height:15px;color:var(--accent)}
+.nav__tel span{direction:ltr}
+.lang{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:inline-flex}
+.lang b{padding:6px 11px}
 .lang .on{background:var(--brand);color:var(--ivory)}
-@media(max-width:880px){.menu{display:none}}
+@media(max-width:980px){.menu,.nav__tel{display:none}}
 
-/* ---------- hero ---------- */
-.hero{position:relative;background:radial-gradient(120% 120% at 80% -10%,var(--brand-deep-2),var(--brand-deep) 55%,var(--ink));color:var(--ivory);overflow:hidden;padding-bottom:clamp(120px,15vw,180px)}
-.hero__sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:220px;opacity:.10;pointer-events:none}
-.hero__sky .b{fill:var(--accent)} .hero__sky .m{stroke:var(--accent);fill:none;stroke-width:2;opacity:.7}
-.hero .wrap{position:relative;z-index:2}
-.hero__ey{color:var(--accent-2)}
-.hero h1{margin:20px 0 18px;max-width:18ch;color:var(--ivory)}
-.hero .lead{color:rgba(246,242,234,.82)}
-.hero__meta{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
-.hero__meta div{font-family:var(--sans);font-size:13px;letter-spacing:.02em;color:rgba(246,242,234,.7)}
-.hero__meta b{display:block;font-family:var(--fa);font-size:26px;font-weight:800;color:var(--ivory);letter-spacing:-.01em;margin-bottom:2px}
-
-/* ---------- search ---------- */
-.search{max-width:980px;margin:-72px auto 0;position:relative;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 70px -40px rgba(20,16,34,.5);padding:10px}
-.search__tabs{display:flex;gap:4px;padding:6px 6px 0}
-.tab{font-family:var(--fa);font-weight:600;font-size:14px;color:var(--muted);background:transparent;border:none;padding:11px 20px;border-radius:9px;cursor:pointer;transition:.2s}
-.tab.active{background:var(--brand);color:var(--ivory)}
-.search__row{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:0;align-items:center;padding:8px}
-.field{padding:10px 16px;border-inline-start:1px solid var(--line)}
-.field:first-child{border:none}
-.field label{display:block;font-size:11px;color:var(--muted);font-family:var(--sans);letter-spacing:.04em;margin-bottom:3px}
-.field .val{font-weight:600;font-size:15px;color:var(--ink)}
-.search .btn{margin-inline-start:8px;width:100%;justify-content:center}
-.search__cell{padding:6px}
-@media(max-width:760px){.search__row{grid-template-columns:1fr 1fr}.field{border-inline-start:none;border-top:1px solid var(--line)}.field:first-child,.field:nth-child(2){border-top:none}.search__cell{grid-column:1/-1}}
+/* ---------- hero: editorial split ---------- */
+.hero{display:grid;grid-template-columns:.92fr 1.08fr;min-height:86svh;background:var(--paper)}
+.hero__text{display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,5vw,76px)}
+.hero__text .eyebrow{margin-bottom:24px}
+.hero h1{font-family:var(--fa);font-weight:800;font-size:clamp(33px,4.6vw,62px);line-height:1.15;letter-spacing:-.015em;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero__en{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.7vw,23px);color:var(--muted);margin-bottom:24px}
+.hero__lead{color:var(--muted);font-size:clamp(15px,1.5vw,17px);max-width:46ch;margin-bottom:30px}
+.qs{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;max-width:540px;box-shadow:0 14px 36px -28px rgba(20,16,34,.4)}
+.qs__tabs{display:flex;gap:2px;padding:8px 8px 0}
+.qs__tabs .tab{font-family:var(--fa);font-weight:600;font-size:13.5px;color:var(--muted);background:transparent;border:none;padding:9px 16px;border-radius:8px;cursor:pointer;transition:.2s}
+.qs__tabs .tab.active{background:var(--brand);color:var(--ivory)}
+.qs__row{display:flex;align-items:center;gap:10px;padding:10px}
+.qs__row input{flex:1;border:none;background:transparent;font-family:var(--fa);font-size:15px;color:var(--ink);outline:none;padding:6px 10px}
+.qs__row input::placeholder{color:var(--muted)}
+.qs .btn{padding:11px 24px;flex:none}
+.hero__hoods{margin-top:24px;font-size:14px;display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center}
+.hero__hoods b{color:var(--muted);font-weight:600;margin-inline-end:6px}
+.hero__hoods a{color:var(--ink);opacity:.8;border-bottom:1px solid transparent;transition:.2s}
+.hero__hoods a:hover{color:var(--brand);border-color:var(--accent);opacity:1}
+.hero__hoods .sep{opacity:.35;margin:0 3px}
+.hero__media{position:relative;overflow:hidden;background:var(--brand-deep)}
+.hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,16,30,.5),transparent 40%)}
+.hero__tag{position:absolute;bottom:22px;inset-inline-start:22px;z-index:2;display:flex;gap:9px;align-items:center;color:var(--ivory);font-size:13px;background:rgba(20,16,30,.4);backdrop-filter:blur(6px);border:1px solid rgba(246,242,234,.2);padding:8px 15px;border-radius:30px}
+.hero__tag b{font-weight:700}
+.hero__tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent-2)}
+/* alborz ridgeline signature */
+.ridge{background:var(--paper);padding:7px 0;color:var(--accent)}
+.ridge svg{display:block;width:100%;height:32px}
+.ridge polyline{fill:none;stroke:currentColor}
+.ridge .r1{stroke-width:1.5;opacity:.9}
+.ridge .r2{stroke-width:1;opacity:.4}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero__text{padding:44px 24px}
+  .hero__media{min-height:56vh}
+}
 
 /* ---------- section head ---------- */
 .shead{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:40px;flex-wrap:wrap}
@@ -113,13 +127,12 @@ header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--p
 @media(max-width:600px){.grid3{grid-template-columns:1fr}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
 .card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -32px rgba(20,16,34,.45)}
-.card__media{position:relative;aspect-ratio:16/11;background:linear-gradient(135deg,var(--brand-deep-2),var(--ink));display:flex;align-items:center;justify-content:center;overflow:hidden}
-.card__media.t2{background:linear-gradient(135deg,var(--brand),var(--brand-deep))}
-.card__media.t3{background:linear-gradient(140deg,var(--ink),var(--brand-deep-2))}
-.card__media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.34),transparent 55%)}
-.card__note{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,242,234,.45)}
+.card__media{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--brand-deep)}
+.card__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.card:hover .card__media img{transform:scale(1.05)}
+.card__media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.3),transparent 55%);z-index:1}
 .badge{position:absolute;top:14px;font-family:var(--fa);font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;z-index:2}
-.badge--type{inset-inline-start:14px;background:rgba(246,242,234,.92);color:var(--ink)}
+.badge--type{inset-inline-start:14px;background:rgba(246,242,234,.94);color:var(--ink)}
 .badge--brass{inset-inline-end:14px;background:var(--accent);color:var(--ink)}
 .card__body{padding:20px}
 .card__loc{font-size:13px;color:var(--muted);margin-bottom:6px}
@@ -213,7 +226,7 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
   <span class="concept__label">پیش‌نمایش جهت‌گیری بصری · Art-direction preview — not the live site</span>
   <div class="swatcher"><span>پالت:</span>
     <button class="pal active" data-pal="A">A · هریتیج</button>
-    <button class="pal" data-pal="B">B · ink & brass</button>
+    <button class="pal" data-pal="B">B · ink &amp; brass</button>
     <button class="pal" data-pal="C">C · emerald</button>
   </div>
 </div></div>
@@ -236,54 +249,53 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
     <a href="#">درباره ما</a>
   </nav>
   <div class="nav__right">
+    <a class="nav__tel" href="tel:+982122000000" aria-label="تماس تلفنی">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>۰۲۱ ۲۲۰۰ ۰۰۰۰</span>
+    </a>
     <span class="lang"><b class="on">FA</b><b>EN</b></span>
-    <a class="btn btn--brass" href="#">مشاوره و تماس</a>
   </div>
 </div></header>
 
-<!-- hero -->
-<div class="hero">
-  <svg class="hero__sky" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <polyline class="m" points="0,120 150,70 300,110 470,55 640,100 820,60 1000,105 1200,72"/>
-    <g class="b">
-      <rect x="40" y="150" width="46" height="70"/><rect x="100" y="120" width="40" height="100"/>
-      <rect x="160" y="160" width="54" height="60"/><rect x="240" y="105" width="42" height="115"/>
-      <rect x="300" y="140" width="60" height="80"/><rect x="380" y="125" width="38" height="95"/>
-      <rect x="440" y="155" width="50" height="65"/><rect x="510" y="115" width="44" height="105"/>
-      <rect x="595" y="62" width="16" height="158"/><ellipse cx="603" cy="60" rx="22" ry="11"/>
-      <rect x="660" y="135" width="56" height="85"/><rect x="740" y="118" width="40" height="102"/>
-      <rect x="800" y="158" width="52" height="62"/><rect x="872" y="128" width="44" height="92"/>
-      <rect x="936" y="148" width="58" height="72"/><rect x="1014" y="120" width="40" height="100"/>
-      <rect x="1078" y="155" width="54" height="65"/>
-    </g>
-  </svg>
-  <div class="wrap">
-    <span class="eyebrow hero__ey">املاک انتخاب اول · از سال ۱۳۸۳</span>
-    <h1 class="h1">خانه‌ای درخور شأن شما،<br>در بهترین محله‌های تهران</h1>
-    <p class="lead">خرید، فروش و رهن و اجارهٔ املاک لوکس در شمال تهران — به‌همراه خدمات تخصصی اسکان سفارت‌خانه‌ها و شرکت‌های خارجی، با بیش از دو دهه اعتماد.</p>
-    <div class="hero__meta">
-      <div><b>۲۰+</b>سال تجربه</div>
-      <div><b>۲۲</b>منطقهٔ تهران</div>
-      <div><b>EN / FA</b>دوزبانه و بین‌المللی</div>
+<!-- hero: editorial split -->
+<section class="hero">
+  <div class="hero__text">
+    <span class="eyebrow">املاک انتخاب اول · از سال ۱۳۸۳</span>
+    <h1>بهترین نشانی‌های تهران،<br><em>انتخاب اول</em> شما.</h1>
+    <p class="hero__en">Tehran’s finest addresses — your first choice.</p>
+    <p class="hero__lead">خرید، فروش و رهن و اجارهٔ املاک لوکس در شمال تهران، و خدمات تخصصی اسکان سفارت‌خانه‌ها و شرکت‌های خارجی.</p>
+    <div class="qs">
+      <div class="qs__tabs">
+        <button class="tab active">خرید</button>
+        <button class="tab">رهن و اجاره</button>
+        <button class="tab">رهن کامل</button>
+      </div>
+      <div class="qs__row">
+        <input type="text" placeholder="محله، منطقه یا کد ملک را وارد کنید…" aria-label="جستجوی ملک">
+        <a class="btn btn--brass" href="#listings">جستجو</a>
+      </div>
+    </div>
+    <div class="hero__hoods">
+      <b>محله‌های منتخب:</b>
+      <a href="#">زعفرانیه</a><span class="sep">·</span>
+      <a href="#">الهیه</a><span class="sep">·</span>
+      <a href="#">نیاوران</a><span class="sep">·</span>
+      <a href="#">فرمانیه</a><span class="sep">·</span>
+      <a href="#">ولنجک</a>
     </div>
   </div>
-</div>
+  <div class="hero__media">
+    <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=1200&q=72&auto=format&fit=crop" alt="آپارتمان لوکس دوبلکس با پنجره‌های قدی و ویوی شهر در شمال تهران — املاک انتخاب اول" fetchpriority="high" decoding="async">
+    <div class="hero__tag"><span class="dot"></span><b>زعفرانیه</b> · فروش · ۲۱۰ متر</div>
+  </div>
+</section>
 
-<!-- search -->
-<div class="wrap">
-  <div class="search">
-    <div class="search__tabs">
-      <button class="tab active">خرید</button>
-      <button class="tab">رهن و اجاره</button>
-      <button class="tab">رهن کامل</button>
-    </div>
-    <div class="search__row">
-      <div class="field"><label>محله یا منطقه</label><div class="val">زعفرانیه</div></div>
-      <div class="field"><label>نوع ملک</label><div class="val">آپارتمان</div></div>
-      <div class="field"><label>بودجه (تومان)</label><div class="val">تا ۴۰ میلیارد</div></div>
-      <div class="search__cell"><a class="btn btn--brass" href="#">جستجوی ملک</a></div>
-    </div>
-  </div>
+<!-- alborz ridgeline signature -->
+<div class="ridge" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <polyline class="r2" points="0,56 200,48 400,52 600,44 800,50 1000,42 1200,50 1440,52" vector-effect="non-scaling-stroke"/>
+    <polyline class="r1" points="0,52 120,40 240,46 360,30 480,42 600,26 720,40 840,34 960,44 1040,22 1080,8 1120,22 1240,40 1320,30 1440,46" vector-effect="non-scaling-stroke"/>
+  </svg>
 </div>
 
 <!-- featured listings -->
@@ -295,9 +307,9 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
   <div class="grid3">
 
     <article class="card">
-      <div class="card__media t1">
+      <div class="card__media">
+        <img src="https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?auto=compress&cs=tinysrgb&w=800" alt="آپارتمان روشن با ویوی شهر و تراس در زعفرانیه" loading="lazy" decoding="async">
         <span class="badge badge--type">فروش</span><span class="badge badge--brass">ویژه</span>
-        <span class="card__note">Professional photography</span>
       </div>
       <div class="card__body">
         <div class="card__loc">زعفرانیه، تهران</div>
@@ -310,9 +322,9 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
     </article>
 
     <article class="card">
-      <div class="card__media t2">
+      <div class="card__media">
+        <img src="https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=800" alt="پنت‌هاوس مدرن و مبله در الهیه" loading="lazy" decoding="async">
         <span class="badge badge--type">رهن و اجاره</span><span class="badge badge--brass">مبله</span>
-        <span class="card__note">Professional photography</span>
       </div>
       <div class="card__body">
         <div class="card__loc">الهیه، تهران</div>
@@ -325,9 +337,9 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
     </article>
 
     <article class="card">
-      <div class="card__media t3">
+      <div class="card__media">
+        <img src="https://images.unsplash.com/photo-1648881806148-e5c51179c826?w=800&q=62&auto=format&fit=crop" alt="ویلا-آپارتمان لوکس اختصاصی در نیاوران" loading="lazy" decoding="async">
         <span class="badge badge--type">اختصاصی</span><span class="badge badge--brass">Off-market</span>
-        <span class="card__note">Private · by request</span>
       </div>
       <div class="card__body">
         <div class="card__loc">نیاوران، تهران</div>
@@ -404,7 +416,7 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
 <section class="spec"><div class="wrap">
   <span class="eyebrow-en">For your approval · برای تأیید</span>
   <h2 class="h2" style="margin-top:14px">جهت‌گیری بصری</h2>
-  <p class="lead">لوگوی بازطراحی‌شده، پالت رنگ و تایپوگرافی — پیش از شروع کدنویسی. دکمه‌های بالای صفحه را بزنید تا کل سایت با پالت‌های A/B/C را ببینید.</p>
+  <p class="lead">لوگوی بازطراحی‌شده، پالت رنگ و تایپوگرافی. دکمه‌های بالای صفحه را بزنید تا کل سایت با پالت‌های A/B/C را ببینید.</p>
 
   <div class="spec__grid">
     <div class="tile">
@@ -480,7 +492,7 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
     <div>
       <h6>تماس</h6>
       <p>تهران، شمال شهر</p>
-      <a href="#">۰۲۱ — ۰۰۰ ۰۰۰۰</a>
+      <a href="tel:+982122000000" style="direction:ltr;text-align:right">۰۲۱ ۲۲۰۰ ۰۰۰۰</a>
       <a href="#">WhatsApp · Telegram · Instagram</a>
       <a href="#">داریوش غنی‌زاده — مدیریت</a>
     </div>
@@ -506,9 +518,9 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
       b.classList.add('active');
     });
   });
-  document.querySelectorAll('.search__tabs .tab').forEach(function(t){
+  document.querySelectorAll('.qs__tabs .tab').forEach(function(t){
     t.addEventListener('click',function(){
-      document.querySelectorAll('.search__tabs .tab').forEach(function(x){x.classList.remove('active');});
+      document.querySelectorAll('.qs__tabs .tab').forEach(function(x){x.classList.remove('active');});
       t.classList.add('active');
     });
   });
