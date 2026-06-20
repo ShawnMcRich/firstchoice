@@ -38,7 +38,7 @@ All three goals are in scope; phased so we ship something impeccably premium **f
 - Brand refresh applied site-wide; bilingual shell (FA/EN, RTL, hreflang) with context-preserving language toggle.
 - Home (premium).
 - Listings index: filters on the real Iranian model (خرید / رهن و اجاره / رهن کامل, neighborhood, type, price, beds, area, furnished), sort, **Neshan map search**.
-- Listing detail: gallery, full Iranian spec set, inline **rهن↔اجاره** + mortgage calculators, share (WhatsApp/Telegram/copy), favorites (no login), similar listings, one-tap contact, multi-currency display, Shamsi dates.
+- Listing detail: gallery, full Iranian spec set, share (WhatsApp/Telegram/copy), favorites (no login), similar listings, one-tap contact, multi-currency display, Shamsi dates. **rهن↔اجاره converter on rental listings** (deposit↔rent — the tool buyers here actually use); price-per-meter + commission/transfer-tax helper on sales. (No Western mortgage calculator — bank housing loans are negligible vs. luxury prices here.)
 - **Neighborhood landing pages** (top ~8 areas) — SEO + expat-useful.
 - **International / Diplomatic Relocation** flagship section (EN-first) + private enquiry.
 - **سپردن ملک** submission wizard → moderation queue.
@@ -58,7 +58,7 @@ All three goals are in scope; phased so we ship something impeccably premium **f
 - Optional payments for featured listings (ZarinPal + Enamad) — only if monetizing placement.
 
 ## 6. Information architecture
-Home · Listings (خرید / رهن و اجاره / رهن کامل) · Listing detail · Neighborhoods (+ per-area guides) · **International / Diplomatic Relocation** · Tools (rهن↔اجاره, mortgage) · Content hub (guides, market reports, glossary, FAQ, blog) · About / heritage · Team · Contact · **سپردن ملک** · Agent dashboard · Legal (privacy / terms).
+Home · Listings (خرید / رهن و اجاره / رهن کامل) · Listing detail · Neighborhoods (+ per-area guides) · **International / Diplomatic Relocation** · Tools (rهن↔اجاره converter, commission/transfer-tax helper) · Content hub (guides, market reports, glossary, FAQ, blog) · About / heritage · Team · Contact · **سپردن ملک** · Agent dashboard · Legal (privacy / terms).
 
 ## 7. Feature highlights (the non-obvious musts)
 - **Shamsi (Jalali) calendar** on the FA side; Gregorian on EN. (Mandatory.)
