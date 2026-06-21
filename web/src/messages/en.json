@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "homeTitle": "First Choice Real Estate | Buy, sell & rent across Iran",
+    "homeDesc": "First Choice Real Estate, since 1988 — buying, selling, renting, swaps and build-partnerships across Iran, with deep expertise in luxury north-Tehran property and diplomatic & corporate relocation."
+  },
+  "nav": {
+    "buy": "Buy & sell",
+    "rent": "Rent",
+    "areas": "Neighborhoods",
+    "intl": "Diplomatic",
+    "about": "About",
+    "submit": "List property",
+    "consult": "Contact"
+  },
+  "hero": {
+    "eyebrow": "First Choice Real Estate · since 1988",
+    "title": "Iran’s finest properties,",
+    "titleEm": "your first choice",
+    "titleAfter": ".",
+    "en": "بهترین املاک ایران — انتخاب اول شما.",
+    "lead": "Buying, selling, renting, swaps and build-partnerships across Iran — with particular expertise in luxury north-Tehran homes and relocation for embassies and international companies.",
+    "tabs": { "buy": "Buy", "rent": "Rent", "full": "Full deposit" },
+    "searchPlaceholder": "Province, city, neighborhood or ref…",
+    "search": "Search",
+    "citiesLabel": "Featured cities:",
+    "tag": "Zafaraniyeh · For sale · 210 m²"
+  },
+  "cities": ["Tehran", "Isfahan", "Mashhad", "Shiraz", "Tabriz", "Karaj"],
+  "categories": {
+    "eyebrow": "Categories",
+    "title": "What we offer",
+    "more": "View all",
+    "items": [
+      { "t": "Apartments for sale", "d": "All apartments for sale" },
+      { "t": "Apartments to rent", "d": "Rentals & deposits" },
+      { "t": "Villas for sale", "d": "All villas for sale" },
+      { "t": "Villas to rent", "d": "All villa rentals" },
+      { "t": "Shop rentals", "d": "Retail & commercial units" },
+      { "t": "Swaps", "d": "All exchange listings" },
+      { "t": "Partnership land", "d": "Build-partnership plots" },
+      { "t": "Offices & commercial", "d": "Offices, towers, admin use" }
+    ]
+  },
+  "featured": {
+    "eyebrow": "Featured",
+    "title": "Selected properties",
+    "more": "View all properties",
+    "details": "Details",
+    "items": [
+      { "loc": "Tehran · Zafaraniyeh", "title": "210 m² apartment with city view", "price": "32,000,000,000", "unit": "Toman", "badge": "For sale", "brass": "Featured", "specs": ["210 m²", "3 beds", "Floor 4"] },
+      { "loc": "Isfahan · Mardavij", "title": "185 m² apartment, fully equipped", "price": "14,500,000,000", "unit": "Toman", "badge": "For sale", "specs": ["185 m²", "3 beds", "Floor 6"] },
+      { "loc": "Tehran · Elahieh", "title": "320 m² penthouse, open to swap", "price": "85,000,000,000", "unit": "+ swap", "badge": "Swap", "specs": ["320 m²", "4 beds", "Floor 8"] }
+    ]
+  },
+  "diplomatic": {
+    "eyebrow": "Diplomatic & Corporate Relocation",
+    "title": "Homes for diplomats, embassies & international companies",
+    "en": "Discreet, fully-managed home-finding for diplomatic missions and international companies in Tehran.",
+    "items": [
+      "Furnished & short-term leases",
+      "English contracts & lease negotiation",
+      "Vetted homes in the embassy belt",
+      "Area, schooling & security orientation"
+    ],
+    "cta": "Make a private enquiry"
+  },
+  "trust": {
+    "stats": [
+      { "n": "38+", "l": "years (since 1988)" },
+      { "n": "1200+", "l": "successful deals" },
+      { "n": "31", "l": "provinces, all Iran" }
+    ],
+    "statement": "Every deal handled with the care and trust you’ve known since 1988.",
+    "aboutCta": "About Dariush Ghanizadeh"
+  },
+  "footer": {
+    "tagline": "First Choice Real Estate — buying, selling, renting, swaps & partnerships across Iran, plus diplomatic relocation, since 1988.",
+    "services": "Services",
+    "areas": "Neighborhoods",
+    "contactT": "Contact",
+    "rights": "© First Choice Real Estate · انتخاب اول — 2026"
+  },
+  "contact": {
+    "phone": "+98 21 2204 1212",
+    "phoneHref": "+982122041212",
+    "fax": "Fax +98 21 2620 1635",
+    "email": "property@firstchoiceco.com",
+    "web": "firstchoiceco.com",
+    "address": "No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3, Tehran",
+    "postal": "Postal code 1915684831"
+  }
+}
