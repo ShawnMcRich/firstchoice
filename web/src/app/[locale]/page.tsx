@@ -15,6 +15,12 @@ const FEATURED_IMG = [
 
 export const revalidate = 300;
 
+const BAND: Record<string, string> = {
+  fa: "از قلب تهران، تا سراسر ایران.",
+  en: "From the heart of Tehran, to all of Iran.",
+  ar: "من قلب طهران، إلى كل إيران.",
+};
+
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
@@ -147,6 +153,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             ))}
           </ul>
           <Link className="btn btn--brass" href={L("/diplomatic")}>{t.diplomatic.cta}</Link>
+        </div>
+      </section>
+
+      {/* Tehran atmospheric band */}
+      <section className="tehranband">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/img/tehran-aerial.webp" alt="" />
+        <div className="wrap">
+          <p>{BAND[locale]}</p>
         </div>
       </section>
 

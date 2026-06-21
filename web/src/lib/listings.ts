@@ -65,7 +65,7 @@ function toCard(doc: ListingDoc, l: Locale): CardListing {
   const price = isRent ? fmt(doc.deposit ?? doc.rent, l) : fmt(doc.price, l);
   return {
     id: String(doc.id),
-    href: `/${l}/listing`,
+    href: `/${l}/listing/${doc.id}`,
     title: doc.title ?? "",
     loc: [doc.city, doc.neighborhood].filter(Boolean).join(" · "),
     price,
@@ -113,5 +113,15 @@ export async function searchListings(
     return (res.docs as ListingDoc[]).map((d) => toCard(d, locale));
   } catch {
     return [];
+  }
+}
+
+export async function getListingById(id: string, locale: Locale): Promise<Record<string, unknown> | null> {
+  try {
+    const payload = await getPayloadClient();
+    const doc = await payload.findByID({ collection: "listings", id, locale, depth: 2 });
+    return doc as Record<string, unknown>;
+  } catch {
+    return null;
   }
 }

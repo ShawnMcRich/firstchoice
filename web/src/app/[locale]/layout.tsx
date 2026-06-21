@@ -17,12 +17,45 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const dict = await getDictionary(isLocale(locale) ? locale : "fa");
+  const loc = isLocale(locale) ? locale : "fa";
+  const dict = await getDictionary(loc);
   return {
+    metadataBase: new URL("https://firstchoiceco.com"),
     title: dict.meta.homeTitle,
     description: dict.meta.homeDesc,
+    alternates: {
+      canonical: `/${loc}`,
+      languages: { fa: "/fa", en: "/en", ar: "/ar", "x-default": "/fa" },
+    },
+    openGraph: {
+      title: dict.meta.homeTitle,
+      description: dict.meta.homeDesc,
+      url: `/${loc}`,
+      siteName: "First Choice Real Estate · انتخاب اول",
+      locale: loc,
+      type: "website",
+    },
   };
 }
+
+const ORG_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: "First Choice Real Estate — انتخاب اول",
+  url: "https://firstchoiceco.com",
+  telephone: "+982122041212",
+  faxNumber: "+982126201635",
+  email: "property@firstchoiceco.com",
+  foundingDate: "1988",
+  areaServed: "IR",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3",
+    addressLocality: "Tehran",
+    postalCode: "1915684831",
+    addressCountry: "IR",
+  },
+};
 
 export default async function LocaleLayout({
   children,
@@ -38,6 +71,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir(locale)} className={`${vazir.variable} ${fraunces.variable} ${manrope.variable}`}>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSONLD) }} />
         <SiteHeader locale={locale} dict={dict} />
         <main>{children}</main>
         <SiteFooter locale={locale} dict={dict} />
