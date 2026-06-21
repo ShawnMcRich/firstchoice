@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>دربارهٔ داریوش غنی‌زاده — انتخاب اول | املاک</title>
+<title>دربارهٔ ما — مشاورین املاک انتخاب اول | از سال ۱۳۶۷</title>
 <link href="https://fonts.bunny.net/css?family=fraunces:400,400i,600,700|manrope:400,500,600,700,800|vazirmatn:300,400,500,700,800&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--fa);background:var(--paper);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--fa);background:var(--paper);color:var(--ink);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--accent);color:var(--ink)}
 a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -32,11 +32,9 @@ section{padding:clamp(48px,6vw,92px) 0}
 .brand{display:flex;align-items:center;gap:13px}
 .brand__fa{font-weight:800;font-size:20px;line-height:1.1}
 .brand__en{display:block;font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-size:9.5px;color:var(--accent);font-weight:600;margin-top:3px}
-/* concept bar */
 .concept{background:var(--ink);color:var(--ivory)}
 .concept .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 24px;flex-wrap:wrap;font-family:var(--sans);font-size:12px}
 .cnav{display:flex;gap:14px;flex-wrap:wrap}.cnav a{color:rgba(246,242,234,.6)}.cnav a.on{color:var(--accent-2);font-weight:700}
-/* header */
 header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
 .menu{display:flex;gap:24px;font-size:15px;font-weight:500}
@@ -46,41 +44,35 @@ header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--p
 .lang{font-size:12.5px;font-weight:600;letter-spacing:.05em;color:var(--muted);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:inline-flex}
 .lang b{padding:6px 10px} .lang .on{background:var(--brand);color:var(--ivory)}
 @media(max-width:980px){.menu{display:none}}
-/* intro */
 .intro{display:grid;grid-template-columns:1fr .82fr;gap:54px;align-items:center}
 @media(max-width:820px){.intro{grid-template-columns:1fr;gap:34px}}
 .intro h1{font-size:clamp(30px,4.4vw,52px);font-weight:800;margin:16px 0 8px;letter-spacing:-.01em}
 .intro .role{color:var(--accent);font-weight:600;font-size:16px;margin-bottom:18px}
 .intro p{color:var(--body);font-size:clamp(15px,1.5vw,17.5px);max-width:48ch;margin-bottom:26px}
 .intro .cta{display:flex;gap:12px;flex-wrap:wrap}
-/* portrait */
 .portrait{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,var(--brand),var(--ink));display:flex;align-items:center;justify-content:center}
 .portrait .ring{position:absolute;inset:16px;border:1px solid rgba(200,163,99,.45);border-radius:12px}
 .portrait .mono{font-family:var(--serif);font-size:72px;color:var(--accent-2);font-weight:600}
 .portrait .cap{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:11.5px;color:rgba(246,242,234,.6);font-family:var(--sans)}
-/* story */
 .story{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.story .grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px}
+.story .grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:48px}
 @media(max-width:820px){.story .grid{grid-template-columns:1fr;gap:20px}}
-.story h2{font-size:clamp(24px,3vw,36px);font-weight:800;line-height:1.3}
-.story p{color:var(--body);font-size:16px;margin-bottom:18px;max-width:64ch}
-/* quote */
+.story h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.3}
+.story p{color:var(--body);font-size:16px;margin-bottom:18px;max-width:66ch}
+.sign{margin-top:26px;font-weight:700;color:var(--ink)}
+.sign span{display:block;color:var(--muted);font-weight:400;font-size:14px;margin-top:2px}
 .quote{text-align:center}
-.quote .wrap{max-width:820px}
-.quote p{font-family:var(--serif);font-size:clamp(22px,3vw,33px);line-height:1.45;font-style:italic;color:var(--ink)}
-.quote cite{display:block;margin-top:22px;font-style:normal;font-size:14px;color:var(--muted)}
-/* stats */
+.quote .wrap{max-width:860px}
+.quote p{font-family:var(--serif);font-size:clamp(22px,3vw,33px);line-height:1.5;font-style:italic;color:var(--ink)}
 .stats{background:var(--brand);color:var(--ivory)}
 .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
 @media(max-width:680px){.stats .wrap{grid-template-columns:1fr;gap:30px}}
 .stats b{display:block;font-size:38px;font-weight:800;letter-spacing:-.01em}
 .stats span{font-size:14px;color:rgba(246,242,234,.78)}
-/* cta band */
 .cta-band{text-align:center}
 .cta-band h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px}
 .cta-band p{color:var(--body);margin-bottom:26px;font-size:16px}
 .cta-band .contact{direction:ltr;color:var(--muted);font-size:14px;margin-top:18px}
-/* footer */
 footer{background:var(--ink);color:rgba(246,242,234,.7)}
 footer .wrap{padding:60px 24px 30px}
 .foot{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-d)}
@@ -114,10 +106,10 @@ footer .wrap{padding:60px 24px 30px}
 <section><div class="wrap">
   <div class="intro">
     <div>
-      <span class="eyebrow">دربارهٔ انتخاب اول · از سال ۱۳۸۳</span>
+      <span class="eyebrow">دربارهٔ ما · از سال ۱۳۶۷</span>
       <h1>داریوش غنی‌زاده</h1>
-      <div class="role">بنیان‌گذار و مدیر · املاک انتخاب اول</div>
-      <p>بیش از دو دهه است که در بهترین محله‌های شمال تهران، در کنار خانواده‌ها، سفارت‌خانه‌ها و شرکت‌های خارجی بوده‌ام تا خانه‌ای درخور پیدا کنند — با همان اعتماد و آرامشی که شایستهٔ این تصمیم بزرگ است.</p>
+      <div class="role">مدیریت · مشاورین املاک انتخاب اول</div>
+      <p>ما معتقدیم باید همان‌گونه که مورد نظر متقاضیانمان است در خدمتشان باشیم؛ باوری که از سال ۱۳۶۷ تاکنون، استمرار کار و اعتماد مشتریان ما گواه آن است.</p>
       <div class="cta">
         <a class="btn btn--brass" href="tel:+982122041212">تماس و مشاوره</a>
         <a class="btn btn--ghost" href="search.html">مشاهدهٔ املاک</a>
@@ -133,23 +125,25 @@ footer .wrap{padding:60px 24px 30px}
 
 <section class="story"><div class="wrap">
   <div class="grid">
-    <div><span class="eyebrow">داستان ما</span><h2 style="margin-top:14px">یک نام، یک تعهد</h2></div>
+    <div><span class="eyebrow">سخن مدیریت</span><h2 style="margin-top:14px">تعهد ما به شما</h2></div>
     <div>
-      <p>املاک انتخاب اول از سال ۱۳۸۳ با یک باور ساده آغاز شد: خرید، فروش و اجارهٔ ملک باید تجربه‌ای شفاف، حرفه‌ای و قابل‌اعتماد باشد. امروز، پس از بیش از بیست سال، همان باور همچنان قطب‌نمای ماست.</p>
-      <p>تمرکز ما بر املاک لوکس شمال تهران است — از زعفرانیه و الهیه تا نیاوران و فرمانیه. در کنار مشتریان ایرانی، سال‌هاست افتخار همکاری با سفارت‌خانه‌ها، کنسولگری‌ها و شرکت‌های خارجی را برای اسکان کارکنانشان در تهران داریم.</p>
-      <p>برای من، هر معامله فقط یک قرارداد نیست؛ آغاز یک رابطهٔ بلندمدت بر پایهٔ صداقت است. بسیاری از کسانی که سال‌ها پیش به ما اعتماد کردند، هنوز در کنار ما هستند.</p>
+      <p>ما معتقدیم باید آن‌گونه که مورد نظر متقاضیانمان است در خدمتشان باشیم. حدود موفقیت ما به‌میزان رضایت متقاضیان ما بوده است؛ که انسجام و استمرار کاری و حفظ ارتباط ارباب‌رجوع با ما از سال ۱۳۶۷ تاکنون، خود گواه این مطلب می‌باشد. ما به‌عنوان گروه مشاورین املاک دارای پروانهٔ رسمی، در خدمت شهرمان تهران هستیم و افتخار داریم که با همسایگان و همشهریان خود آشنا شده و در جهت رفع نیازهای ملکی آنان بکوشیم.</p>
+      <p>مردم مهربان ما به‌خوبی می‌دانند که به‌راحتی می‌توانند برای یک سؤال ساده، یا برای یک تجزیه‌وتحلیل رایگان دربارهٔ بازار ملک یا بررسی یک سرمایه‌گذاری خوب ملکی، با ما در تماس باشند.</p>
+      <p>ما معتقدیم که یک مشاور املاک باید تمام ابعاد جامعهٔ خویش را خوب بشناسد؛ املاک داخل طرح شهرداری، اتوبان‌ها، مراکز خرید، مدارس، مراکز درمانی، کتابخانه‌ها، پارک‌ها، مراکز تفریحی و… البته اینها فقط بخشی از موضوعات حائز اهمیت‌اند. زمانی که در جستجوی خرید یا اجارهٔ ملکی باشید، ما با ارائهٔ آخرین وقایع و اخبار روزِ بازار ملک، آمادهٔ پاسخ‌گویی به تمام سؤالات شما هستیم.</p>
+      <p>به‌عنوان مشاور شما، قدم را فراتر می‌گذاریم و به شما کمک خواهیم نمود که ملک دلخواه خود را به قیمتی منصفانه خریداری یا اجاره نمایید. تأمین منافع شما به‌نحو مطلوب، در درجهٔ اول اهمیتِ مشاورین املاک انتخاب اول می‌باشد.</p>
+      <p>به پشتوانهٔ اطمینان و احترامی که مردم خوب ما برای سابقهٔ این دفتر قائل هستند، ما قادریم رؤیای شما را به واقعیت مبدل سازیم.</p>
+      <div class="sign">مدیریت مشاورین املاک انتخاب اول<span>غنی‌زاده</span></div>
     </div>
   </div>
 </div></section>
 
 <section class="quote"><div class="wrap">
-  <p>«خانه، بزرگ‌ترین تصمیم زندگی بسیاری از ماست؛ وظیفهٔ من این است که این مسیر امن و مطمئن باشد.»</p>
-  <cite>— داریوش غنی‌زاده</cite>
+  <p>«تأمین منافع شما به‌نحو مطلوب، در درجهٔ اول اهمیتِ مشاورین املاک انتخاب اول است.»</p>
 </div></section>
 
 <section class="stats"><div class="wrap">
-  <div><b>۲۰+</b><span>سال تجربه</span></div>
-  <div><b>۱۲۰۰+</b><span>معاملهٔ موفق</span></div>
+  <div><b>۳۸+</b><span>سال سابقه (از ۱۳۶۷)</span></div>
+  <div><b>پروانهٔ رسمی</b><span>مشاور املاک</span></div>
   <div><b>سفارت‌خانه‌ها</b><span>و شرکت‌های خارجی</span></div>
 </div></section>
 
@@ -169,11 +163,12 @@ footer .wrap{padding:60px 24px 30px}
     <div><h6>تماس</h6>
       <p>تهران، منطقه ۳، امانیه،<br>خیابان آفریقا (جردن)، بلوار ناهید شرقی، پلاک ۲۴</p>
       <a href="tel:+982122041212" style="direction:ltr;text-align:right">۰۲۱-۲۲۰۴-۱۲۱۲</a>
+      <p style="direction:ltr;text-align:right">نمابر ۰۲۱-۲۶۲۰-۱۶۳۵</p>
       <a href="mailto:property@firstchoiceco.com">property@firstchoiceco.com</a>
       <a href="https://firstchoiceco.com">firstchoiceco.com</a>
     </div>
   </div>
-  <div class="foot__bot">© انتخاب اول · First Choice Real Estate — ۱۴۰۵</div>
+  <div class="foot__bot">© مشاورین املاک انتخاب اول · First Choice Real Estate — ۱۴۰۵</div>
 </div></footer>
 
 </body>

@@ -6,8 +6,8 @@ Last updated: 2026-06-21 · Status: pre-build (art direction for approval)
 ---
 
 ## 1. The business
-- Established **~۱۳۸۳ / 2004** (20+ years). Tehran agency, strong north-Tehran / luxury focus.
-- **Public identity / contact:** Public domain **firstchoiceco.com** (note: GitHub repo is `firstchoice`). Office: No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3, Tehran — کدپستی **1915684831**. Phones: 021-2204-1212 · 021-2202-1616 · 021-2205-3232 · 021-2205-6621 · mobile 0912-108-1212. Email: **property@firstchoiceco.com**.
+- Established **~۱۳۶۷ / 1988** (38+ years; the *logo* is newer, ~2004 — don't conflate). **Serves all of Iran & every city**; north-Tehran luxury + diplomatic remains the flagship strength.
+- **Public identity / contact:** Public domain **firstchoiceco.com** (note: GitHub repo is `firstchoice`). Office: No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3, Tehran — کدپستی **1915684831**. Phones: 021-2204-1212 · 021-2202-1616 · 021-2205-3232 · 021-2205-6621 · mobile 0912-108-1212. Fax: 021-2620-1635. Email: **property@firstchoiceco.com**.
 - Three service lines:
   1. **Buy / sell & rent** — خرید و فروش، رهن و اجاره، رهن کامل.
   2. **Flagship — Diplomatic & Corporate Relocation:** housing diplomats, consular staff, and foreign-company employees during their posting in Tehran. High-value, high-trust, almost zero online competition in English.
@@ -44,7 +44,7 @@ All three goals are in scope; phased so we ship something impeccably premium **f
 - **International / Diplomatic Relocation** flagship section (EN-first) + private enquiry.
 - **سپردن ملک** submission wizard → moderation queue.
 - Agent/admin dashboard: listing CRUD with image-normalization pipeline; **moderation — both agents AND the public submit listings/files → owner (admin) approves before publish**; **People CRM: browse & search every contact by role — customers, tenants, owners, landlords — with details & history**; per-agent **leads inbox** + status tracker.
-- Trust: **About page with Dariush Ghanizadeh's photo & 20-year story** (personal brand — he's led with this for years; `design/about.html`), team, contact + **Neshan map**. **No certificate/trust-seal icons** (Enamad/نماد, Samandehi, union badges) — owner explicitly declined.
+- Trust: **About page with Dariush Ghanizadeh's photo & 38-year story** (personal brand — he's led with this for years; `design/about.html`), team, contact + **Neshan map**. **No certificate/trust-seal icons** (Enamad/نماد, Samandehi, union badges) — owner explicitly declined.
 - SEO core: schema, hreflang, sitemaps, **OG link previews**, Search Console; self-hosted analytics; **Turnstile** (not reCAPTCHA). Performance budgets enforced.
 
 **Phase 2 — Content & growth**
@@ -64,7 +64,7 @@ Home · Listings (خرید / رهن و اجاره / رهن کامل) · Listing 
 ## 7. Feature highlights (the non-obvious musts)
 - **Shamsi (Jalali) calendar** on the FA side; Gregorian on EN. (Mandatory.)
 - **Gorgeous OG link previews** — Iran's sharing runs on WhatsApp/Telegram/Instagram; a shared listing must render as a premium card.
-- **Heritage/longevity story** ("از سال ۱۳۸۳ · 20+ years") as a trust pillar.
+- **Heritage/longevity story** ("از سال ۱۳۶۷ · 38+ years") as a trust pillar.
 - ~~Union/trust-badge display~~ — **owner declined certificate icons** (Enamad/نماد, Samandehi, union). کد رهگیری stays an operational contract step, not a badge.
 - Toman/Rial + Persian-numeral toggle; **multi-currency** (USD/EUR) for international.
 - Domestic messenger fallbacks (Eitaa/Bale) beside WhatsApp/Telegram.
@@ -102,3 +102,14 @@ WCAG **AA**; full keyboard + RTL/LTR; privacy / terms / cookie notice (EU diplom
 1. **Approve art direction** → `design/art-direction.html` (palette A vs B/C, logo refresh).
 2. Finalize the vector logo (outline the wordmark for production).
 3. Scaffold **Next.js + CMS**; build **Phase 1**.
+
+## 14. Owner-provided taxonomy & scope (his notes — `docs/owner-notes/`)
+**Coverage: ALL of Iran, every city** (not Tehran-only). Location model = استان → شهر → محله. North-Tehran luxury + diplomatic remains the flagship.
+
+**Transaction types / offers:** خرید، فروش، رهن و اجاره، رهن کامل، **معاوضه** (swap/exchange), **مشارکت در ساخت** (build-partnership / زمین مشارکتی). Curated landing tiles he uses: آپارتمان فروشی · آپارتمان اجاره‌ای · ویلا فروشی · ویلا اجاره‌ای · اجاره مغازه · معاوضه‌ها · زمین‌های مشارکتی.
+
+**Property types (نوع ملک):** آپارتمان، ویلا، زمین، کلنگی، دفتر (سند اداری)، دفتر (موقعیت اداری)، مغازه، ساختمان یکجا، برج، پنت‌هاوس، سوئیت، اتاق، کارخانه، نمایشگاه.
+
+**Amenities (امکانات):** آب، برق، گاز، پارکینگ، آسانسور، انباری، درب ضد سرقت، تلفن، شوفاژ، شومینه، پکیج، کولر، سونا، استخر، جکوزی، آیفون تصویری، دوربین مدار بسته، درب ریموت، آنتن مرکزی، پاسیو، باربیکیو، بالکن، حیاط، لابی، سالن اجتماعات، سرایداری، مبله، اطفاء حریق، آب چاه، وام‌پذیر.
+
+**About-us copy:** owner supplied his own official text (since ۱۳۶۷; signed "مدیریت مشاورین املاک انتخاب اول — غنی‌زاده") — used verbatim on `design/about.html`. His photo + final bio still pending.
