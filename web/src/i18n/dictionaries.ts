@@ -18,7 +18,7 @@ export interface Dictionary {
   diplomatic: { eyebrow: string; title: string; en: string; items: string[]; cta: string };
   trust: { stats: { n: string; l: string }[]; statement: string; aboutCta: string };
   footer: { tagline: string; services: string; areas: string; contactT: string; rights: string };
-  contact: { phone: string; phoneHref: string; fax: string; email: string; web: string; address: string; postal: string };
+  contact: { phone: string; phoneHref: string; faxLabel: string; fax: string; email: string; web: string; address: string; postal: string };
 }
 
 const dictionaries = {

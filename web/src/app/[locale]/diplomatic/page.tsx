@@ -139,7 +139,7 @@ export default async function DiplomaticPage({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="dhero__bg" src={HERO_IMG} alt="" />
         <div className="wrap">
-          <span className="eyebrow-en">{d.eyebrow}</span>
+          <span className="eyebrow">{d.eyebrow}</span>
           <h1>{d.title} <em>{d.titleEm}</em></h1>
           <p>{d.sub}</p>
           <div className="cta">

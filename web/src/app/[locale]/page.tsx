@@ -5,8 +5,7 @@ import { isLocale } from "@/i18n/config";
 import { getFeatured } from "@/lib/listings";
 import { ListingCard } from "@/components/ListingCard";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=1200&q=72&auto=format&fit=crop";
+const HERO_IMG = "/img/tehran-tower.webp";
 const FEATURED_IMG = [
   "https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=800&q=62&auto=format&fit=crop",
   "https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -40,7 +39,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <em>{t.hero.titleEm}</em>
             {t.hero.titleAfter}
           </h1>
-          <p className="hero__en">{t.hero.en}</p>
           <p className="hero__lead">{t.hero.lead}</p>
           <div className="qs">
             <div className="qs__tabs">
@@ -142,11 +140,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       {/* diplomatic teaser */}
       <section className="diplo">
         <div className="wrap">
-          <span className="eyebrow-en">{t.diplomatic.eyebrow}</span>
+          <span className="eyebrow">{t.diplomatic.eyebrow}</span>
           <h2 className="h2" style={{ color: "var(--ivory)", margin: "18px 0 14px", maxWidth: "22ch" }}>
             {t.diplomatic.title}
           </h2>
-          <p className="en" style={{ maxWidth: "60ch" }}>{t.diplomatic.en}</p>
           <ul style={{ maxWidth: "60ch" }}>
             {t.diplomatic.items.map((it) => (
               <li key={it}>{it}</li>

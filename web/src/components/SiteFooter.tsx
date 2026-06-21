@@ -29,8 +29,8 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             <h6>{dict.footer.contactT}</h6>
             <p>{dict.contact.address}</p>
             <p>{dict.contact.postal}</p>
-            <a href={`tel:${dict.contact.phoneHref}`} style={{ direction: "ltr" }}>{dict.contact.phone}</a>
-            <p style={{ direction: "ltr" }}>{dict.contact.fax}</p>
+            <a href={`tel:${dict.contact.phoneHref}`}><span dir="ltr" style={{ unicodeBidi: "isolate" }}>{dict.contact.phone}</span></a>
+            <p>{dict.contact.faxLabel}: <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{dict.contact.fax}</span></p>
             <a href={`mailto:${dict.contact.email}`}>{dict.contact.email}</a>
             <a href={`https://${dict.contact.web}`}>{dict.contact.web}</a>
           </div>

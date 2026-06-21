@@ -76,14 +76,15 @@
   "footer": {
     "tagline": "First Choice Real Estate — buying, selling, renting, swaps & partnerships across Iran, plus diplomatic relocation, since 1988.",
     "services": "Services",
-    "areas": "Neighborhoods",
+    "areas": "Cities",
     "contactT": "Contact",
     "rights": "© First Choice Real Estate · انتخاب اول — 2026"
   },
   "contact": {
     "phone": "+98 21 2204 1212",
     "phoneHref": "+982122041212",
-    "fax": "Fax +98 21 2620 1635",
+    "faxLabel": "Fax",
+    "fax": "+98 21 2620 1635",
     "email": "property@firstchoiceco.com",
     "web": "firstchoiceco.com",
     "address": "No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3, Tehran",
