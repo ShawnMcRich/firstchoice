@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
-import { getListingById } from "@/lib/listings";
+import { getListingById, placeholderFor } from "@/lib/listings";
 import { amenityOptions, propertyTypeOptions, deedTypeOptions } from "@/collections/options";
 
 export const dynamic = "force-dynamic";
@@ -79,7 +79,14 @@ export default async function ListingPage({ params }: { params: Promise<{ locale
             </div>
           ))}
         </div>
-      ) : null}
+      ) : (
+        <div className="gallery gallery--solo">
+          <div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={placeholderFor(g<string>("propertyType"))} alt={g<string>("title") ?? ""} />
+          </div>
+        </div>
+      )}
 
       <div className="facts">
         {area ? <div className="fact"><b>{fmt(area)}</b><span>{t.area}</span></div> : null}

@@ -19,6 +19,7 @@ type ListingDoc = {
   id: string | number;
   title?: string;
   transactionType?: string;
+  propertyType?: string;
   city?: string;
   neighborhood?: string;
   area?: number;
@@ -49,6 +50,20 @@ function firstImage(images: ListingDoc["images"]): string | undefined {
   return undefined;
 }
 
+// Context-aware placeholder by property type, used when a listing has no photo.
+const PLACEHOLDER: Record<string, string> = {
+  apartment: "apartment", suite: "apartment", room: "apartment",
+  villa: "villa", kolangi: "villa",
+  penthouse: "penthouse",
+  tower: "tower", wholeBuilding: "tower",
+  land: "land",
+  shop: "shop", showroom: "shop",
+  officeDeed: "office", officeLocation: "office", factory: "office",
+};
+export function placeholderFor(propertyType?: string): string {
+  return `/img/placeholders/${(propertyType && PLACEHOLDER[propertyType]) || "default"}.webp`;
+}
+
 function specs(doc: ListingDoc, l: Locale): string[] {
   const u = { fa: ["متر", "خواب", "طبقه"], en: ["m²", "beds", "Floor"], ar: ["م²", "غرف", "الطابق"] }[l];
   const out: string[] = [];
@@ -72,7 +87,7 @@ function toCard(doc: ListingDoc, l: Locale): CardListing {
     unit,
     badge: TX_LABEL[doc.transactionType ?? "sale"]?.[l] ?? "",
     specs: specs(doc, l),
-    image: firstImage(doc.images),
+    image: firstImage(doc.images) ?? placeholderFor(doc.propertyType),
     featured: Boolean(doc.featured),
   };
 }

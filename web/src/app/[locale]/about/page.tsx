@@ -115,7 +115,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </div>
             <div className="portrait">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/dariush.png" alt={c.name} />
+              <img src="/dariush.webp" alt={c.name} />
               <span className="ring" />
             </div>
           </div>
