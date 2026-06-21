@@ -144,3 +144,14 @@ footer .wrap{padding-top:72px;padding-bottom:30px}
 .foot .brand__fa{color:var(--ivory)}
 .foot__intro{font-size:14px;line-height:1.8;margin:16px 0 0;max-width:34ch}
 .foot__bot{display:flex;justify-content:space-between;padding-top:24px;font-size:12.5px;color:rgba(246,242,234,.5);flex-wrap:wrap;gap:10px}
+
+/* search page */
+.fbar{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:14px 0 22px;box-shadow:0 14px 36px -30px rgba(20,16,34,.4)}
+.fbar__tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.fbar__tabs a{font-family:var(--fa);font-weight:600;font-size:13.5px;color:var(--muted);padding:8px 16px;border-radius:8px;border:1px solid var(--line)}
+.fbar__tabs a.on{background:var(--brand);color:var(--ivory);border-color:var(--brand)}
+.fbar form{display:flex;gap:10px}
+.fbar input{flex:1;border:1px solid var(--line);border-radius:9px;padding:11px 14px;font-family:var(--fa);font-size:15px;background:var(--paper);color:var(--ink);outline:none}
+.fbar input:focus{border-color:var(--accent)}
+.results-head{margin:6px 0 18px;font-size:16px}
+.empty{padding:60px 20px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px;background:var(--card)}

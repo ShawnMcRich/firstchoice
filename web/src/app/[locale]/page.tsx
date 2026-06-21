@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/i18n/dictionaries";
 import { isLocale } from "@/i18n/config";
+import { getFeatured } from "@/lib/listings";
+import { ListingCard } from "@/components/ListingCard";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=1200&q=72&auto=format&fit=crop";
@@ -11,10 +13,13 @@ const FEATURED_IMG = [
   "https://images.unsplash.com/photo-1612965607446-25e1332775ae?w=800&q=62&auto=format&fit=crop",
 ];
 
+export const revalidate = 300;
+
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const t = await getDictionary(locale);
+  const featured = await getFeatured(locale);
   const L = (p: string) => `/${locale}${p}`;
 
   return (
@@ -94,7 +99,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <Link className="more" href={L("/search")}>{t.featured.more} →</Link>
           </div>
           <div className="grid3">
-            {t.featured.items.map((f, i) => (
+            {featured.length > 0
+              ? featured.map((item) => (
+                  <ListingCard key={item.id} item={item} locale={locale} detailsLabel={t.featured.details} />
+                ))
+              : t.featured.items.map((f, i) => (
               <article className="card" key={f.title}>
                 <div className="card__media">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
