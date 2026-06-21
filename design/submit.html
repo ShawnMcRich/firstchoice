@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>سپردن ملک — انتخاب اول | ملک خود را برای فروش یا اجاره ثبت کنید</title>
+<title>سپردن ملک — انتخاب اول | ثبت ملک برای فروش، اجاره، معاوضه یا مشارکت در سراسر ایران</title>
 <link href="https://fonts.bunny.net/css?family=fraunces:400,400i,600,700|manrope:400,500,600,700,800|vazirmatn:300,400,500,700,800&display=swap" rel="stylesheet">
 <style>
 :root{
   --brand:#2E2350; --brand-deep:#1B1535; --brand-deep-2:#241C44;
   --accent:#B68D4C; --accent-2:#C8A363;
   --ivory:#F6F2EA; --paper:#FBF9F5; --ink:#1A1622; --muted:#6E6880;
-  --card:#FFFFFF; --line:rgba(26,22,34,.12); --line-d:rgba(246,242,234,.16);
+  --card:#FFFFFF; --line:rgba(26,22,34,.12); --line-d:rgba(246,242,234,.18);
   --serif:'Fraunces',Georgia,serif; --sans:'Manrope',system-ui,sans-serif; --fa:'Vazirmatn',Tahoma,sans-serif;
   --maxw:1180px;
 }
@@ -21,21 +21,18 @@ a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--fa);font-weight:600;font-size:15px;padding:13px 26px;border-radius:9px;border:1.5px solid transparent;cursor:pointer;transition:.2s}
 .btn:hover{transform:translateY(-2px)} .btn--brass{background:var(--accent);color:var(--ink)} .btn--brass:hover{background:var(--accent-2)}
-.btn--block{width:100%}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--accent);font-weight:600;font-size:14px}
 .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent)}
-.eyebrow.lite{color:var(--accent-2)}
+.eyebrow.lite{color:var(--accent-2)}.eyebrow.lite::before{background:var(--accent-2)}
 .mark{width:42px;height:42px;flex:none}
 .mk-sq{fill:var(--brand)} .mk-fr{stroke:var(--accent)} .mk-one{fill:var(--ivory)}
 .mark--rev .mk-sq{fill:var(--ivory)} .mark--rev .mk-fr{stroke:var(--brand)} .mark--rev .mk-one{fill:var(--brand)}
 .brand{display:flex;align-items:center;gap:13px}
 .brand__fa{font-weight:800;font-size:20px;line-height:1.1}
 .brand__en{display:block;font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-size:9.5px;color:var(--accent);font-weight:600;margin-top:3px}
-/* concept bar */
 .concept{background:var(--ink);color:var(--ivory)}
 .concept .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 24px;flex-wrap:wrap;font-family:var(--sans);font-size:12px}
 .cnav{display:flex;gap:14px;flex-wrap:wrap}.cnav a{color:rgba(246,242,234,.6)}.cnav a.on{color:var(--accent-2);font-weight:700}
-/* header */
 header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
 .menu{display:flex;gap:24px;font-size:15px;font-weight:500}
@@ -44,30 +41,26 @@ header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--p
 .nav__tel{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:14px}
 .nav__tel svg{width:15px;height:15px;color:var(--accent)}.nav__tel span{direction:ltr}
 @media(max-width:980px){.menu,.nav__tel{display:none}}
-/* intro */
 .intro{background:linear-gradient(135deg,var(--brand-deep),var(--ink));color:var(--ivory);padding:clamp(46px,7vw,82px) 0}
 .intro h1{font-size:clamp(28px,4vw,46px);font-weight:800;margin:14px 0 14px;line-height:1.2}
 .intro p{color:rgba(246,242,234,.82);max-width:54ch;font-size:clamp(15px,1.6vw,17px)}
 .intro .pts{display:flex;gap:14px 28px;margin-top:26px;flex-wrap:wrap;font-size:14px;color:rgba(246,242,234,.85)}
 .intro .pts b{color:var(--accent-2)}
-/* layout */
 .subwrap{display:grid;grid-template-columns:1fr 358px;gap:42px;align-items:start;padding:42px 0 90px}
 @media(max-width:920px){.subwrap{grid-template-columns:1fr;gap:30px}}
 .formcard{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:clamp(22px,4vw,38px);box-shadow:0 26px 60px -46px rgba(20,16,34,.5)}
-/* stepper */
 .stepper{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:30px;padding-bottom:24px;border-bottom:1px solid var(--line)}
 .st{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
 .st .n{width:25px;height:25px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
 .st.active{color:var(--ink);font-weight:600}.st.active .n{background:var(--brand);color:var(--ivory);border-color:var(--brand)}
 .st .ln{width:18px;height:1.5px;background:var(--line)}
 @media(max-width:560px){.st .lbl{display:none}.st .ln{width:10px}}
-/* form sections */
 .fsec{margin-bottom:28px}
 .fsec h3{font-size:16px;font-weight:800;margin-bottom:15px;display:flex;align-items:center;gap:10px}
 .fsec h3 .nn{width:24px;height:24px;border-radius:7px;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}
-.toggle{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.toggle button{padding:11px 24px;font-family:var(--fa);font-weight:600;font-size:14px;background:var(--card);border:none;cursor:pointer;color:var(--muted)}
-.toggle button.active{background:var(--brand);color:var(--ivory)}
+.toggle{display:flex;flex-wrap:wrap;gap:8px}
+.toggle button{padding:10px 18px;font-family:var(--fa);font-weight:600;font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:9px;cursor:pointer;color:var(--muted)}
+.toggle button.active{background:var(--brand);color:var(--ivory);border-color:var(--brand)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
 @media(max-width:560px){.grid2,.grid3{grid-template-columns:1fr}}
@@ -77,13 +70,12 @@ input:focus{border-color:var(--accent)}
 .fakesel{display:flex;justify-content:space-between;align-items:center;cursor:pointer}
 .fakesel .car{color:var(--muted)}
 .chipset{display:flex;flex-wrap:wrap;gap:9px}
-.ch{border:1px solid var(--line);border-radius:20px;padding:8px 15px;font-size:13.5px;cursor:pointer;background:var(--card);transition:.2s}
+.ch{border:1px solid var(--line);border-radius:20px;padding:7px 14px;font-size:13px;cursor:pointer;background:var(--card);transition:.2s}
 .ch.on{background:color-mix(in srgb,var(--brand) 10%,transparent);border-color:var(--accent);color:var(--brand);font-weight:600}
 .drop{border:1.5px dashed color-mix(in srgb,var(--accent) 50%,var(--line));border-radius:14px;padding:34px 20px;text-align:center;background:var(--paper)}
 .drop .ic{font-size:24px}.drop b{display:block;margin:10px 0 4px;font-size:15px}.drop span{font-size:12.5px;color:var(--muted)}
 .formfoot{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line);flex-wrap:wrap}
 .formfoot small{color:var(--muted);font-size:12.5px}
-/* sidebar */
 .aside{position:sticky;top:94px;display:grid;gap:18px}
 @media(max-width:920px){.aside{position:static}}
 .box{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:24px}
@@ -95,7 +87,6 @@ input:focus{border-color:var(--accent)}
 .box--dark h4{color:var(--ivory)}
 .mp{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-d);font-size:14px;color:rgba(246,242,234,.86)}
 .mp:last-child{border:none}.mp .n{color:var(--accent-2);font-weight:800}
-/* footer */
 footer{background:var(--ink);color:rgba(246,242,234,.66)}
 footer .wrap{padding:48px 24px 26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(246,242,234,.5)}
@@ -107,7 +98,8 @@ footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(2
   <span style="opacity:.7">نمونهٔ صفحهٔ سپردن ملک · List-your-property concept</span>
   <nav class="cnav">
     <a href="art-direction.html">صفحهٔ اصلی</a><a href="listing.html">جزئیات ملک</a>
-    <a href="search.html">جستجو</a><a href="diplomatic.html">بین‌الملل</a><a class="on" href="submit.html">سپردن ملک</a>
+    <a href="search.html">جستجو</a><a href="diplomatic.html">بین‌الملل</a>
+    <a href="about.html">دربارهٔ ما</a><a class="on" href="submit.html">سپردن ملک</a>
   </nav>
 </div></div>
 
@@ -116,20 +108,19 @@ footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(2
     <svg class="mark" viewBox="0 0 120 120"><rect class="mk-sq" x="4" y="4" width="112" height="112" rx="12"/><rect class="mk-fr" x="13" y="13" width="94" height="94" rx="7" fill="none" stroke-width="1.4" opacity=".85"/><path class="mk-one" d="M69 30 L69 84 L80 84 L80 92 L40 92 L40 84 L55 84 L55 47 L41 52 Z"/></svg>
     <span><span class="brand__fa">انتخاب اول</span><span class="brand__en">First Choice · Real Estate</span></span>
   </a>
-  <nav class="menu"><a href="search.html">خرید و فروش</a><a href="search.html">رهن و اجاره</a><a href="#">محله‌ها</a><a href="diplomatic.html">خدمات بین‌الملل</a><a class="on" href="#">سپردن ملک</a></nav>
+  <nav class="menu"><a href="search.html">خرید و فروش</a><a href="search.html">رهن و اجاره</a><a href="#">محله‌ها</a><a href="diplomatic.html">خدمات بین‌الملل</a><a href="about.html">درباره ما</a></nav>
   <a class="nav__tel" href="tel:+982122041212"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>۰۲۱-۲۲۰۴-۱۲۱۲</span></a>
 </div></header>
 
 <section class="intro"><div class="wrap">
-  <span class="eyebrow lite">سپردن ملک · رایگان</span>
+  <span class="eyebrow lite">سپردن ملک · رایگان · سراسر ایران</span>
   <h1>ملک خود را به انتخاب اول بسپارید</h1>
-  <p>با بیش از سه دهه تجربه و شبکه‌ای از خریداران و مستأجران معتبر — از خانواده‌ها تا سفارت‌خانه‌ها و شرکت‌های خارجی — ملک شما را حرفه‌ای و محرمانه به نتیجه می‌رسانیم.</p>
+  <p>با بیش از سه دهه تجربه (از سال ۱۳۶۷) و شبکه‌ای از خریداران و مستأجران معتبر — از خانواده‌ها تا سفارت‌خانه‌ها و شرکت‌های خارجی — ملک شما را در هر نقطهٔ ایران، حرفه‌ای و محرمانه به نتیجه می‌رسانیم.</p>
   <div class="pts"><span><b>✓</b> کارشناسی و قیمت‌گذاری رایگان</span><span><b>✓</b> عکاسی حرفه‌ای</span><span><b>✓</b> تنظیم قرارداد و کد رهگیری</span></div>
 </div></section>
 
 <div class="wrap">
   <div class="subwrap">
-    <!-- form -->
     <div class="formcard">
       <div class="stepper">
         <div class="st active"><span class="n">۱</span><span class="lbl">معامله و ملک</span></div><span class="ln"></span>
@@ -142,19 +133,22 @@ footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(2
       <div class="fsec">
         <h3><span class="nn">۱</span> نوع معامله و ملک</h3>
         <label>نوع معامله</label>
-        <div class="toggle"><button class="active">فروش</button><button>رهن و اجاره</button><button>رهن کامل</button></div>
+        <div class="toggle"><button class="active">فروش</button><button>رهن و اجاره</button><button>رهن کامل</button><button>معاوضه</button><button>مشارکت در ساخت</button></div>
         <div class="grid2" style="margin-top:16px">
           <div><label>نوع ملک</label><div class="fakesel">آپارتمان <span class="car">▾</span></div></div>
           <div><label>وضعیت</label><div class="fakesel">تخلیه <span class="car">▾</span></div></div>
         </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px">انواع ملک: آپارتمان، ویلا، پنت‌هاوس، سوئیت، برج، کلنگی، زمین، مغازه، دفتر (سند/موقعیت اداری)، ساختمان یکجا، اتاق، کارخانه، نمایشگاه.</p>
       </div>
 
       <div class="fsec">
-        <h3><span class="nn">۲</span> موقعیت</h3>
-        <div class="grid2">
-          <div><label>محله / منطقه</label><div class="fakesel">زعفرانیه <span class="car">▾</span></div></div>
-          <div><label>آدرس (محرمانه می‌ماند)</label><input type="text" placeholder="خیابان، کوچه…"></div>
+        <h3><span class="nn">۲</span> موقعیت (سراسر ایران)</h3>
+        <div class="grid3">
+          <div><label>استان</label><div class="fakesel">تهران <span class="car">▾</span></div></div>
+          <div><label>شهر</label><div class="fakesel">تهران <span class="car">▾</span></div></div>
+          <div><label>محله</label><div class="fakesel">زعفرانیه <span class="car">▾</span></div></div>
         </div>
+        <div style="margin-top:14px"><label>آدرس (محرمانه می‌ماند)</label><input type="text" placeholder="خیابان، کوچه…"></div>
       </div>
 
       <div class="fsec">
@@ -169,9 +163,14 @@ footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(2
         </div>
         <label style="margin-top:16px">امکانات</label>
         <div class="chipset">
-          <span class="ch on">آسانسور</span><span class="ch on">پارکینگ</span><span class="ch">انباری</span>
-          <span class="ch on">بالکن</span><span class="ch">استخر</span><span class="ch">نگهبانی</span>
-          <span class="ch">روف‌گاردن</span><span class="ch">مبله</span><span class="ch">بازسازی‌شده</span>
+          <span class="ch on">پارکینگ</span><span class="ch on">آسانسور</span><span class="ch on">انباری</span><span class="ch on">بالکن</span>
+          <span class="ch">آب</span><span class="ch">برق</span><span class="ch">گاز</span><span class="ch">شوفاژ</span>
+          <span class="ch">پکیج</span><span class="ch">کولر</span><span class="ch">شومینه</span><span class="ch">استخر</span>
+          <span class="ch">سونا</span><span class="ch">جکوزی</span><span class="ch">آیفون تصویری</span><span class="ch">دوربین مدار بسته</span>
+          <span class="ch">درب ضد سرقت</span><span class="ch">درب ریموت</span><span class="ch">آنتن مرکزی</span><span class="ch">پاسیو</span>
+          <span class="ch">باربیکیو</span><span class="ch">حیاط</span><span class="ch">لابی</span><span class="ch">سالن اجتماعات</span>
+          <span class="ch">سرایداری</span><span class="ch">تلفن</span><span class="ch">مبله</span><span class="ch">اطفاء حریق</span>
+          <span class="ch">آب چاه</span><span class="ch">وام‌پذیر</span>
         </div>
       </div>
 
@@ -192,17 +191,16 @@ footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(2
       </div>
 
       <div class="formfoot">
-        <small>پس از ثبت، کارشناس ما برای هماهنگی بازدید و عکاسی با شما تماس می‌گیرد.</small>
+        <small>پس از ثبت، ملک شما پیش از انتشار توسط کارشناسان ما بررسی و تأیید می‌شود.</small>
         <button class="btn btn--brass">ثبت و ارسال برای بررسی</button>
       </div>
     </div>
 
-    <!-- sidebar -->
     <aside class="aside">
       <div class="box">
         <h4>چرا انتخاب اول؟</h4>
-        <div class="benefit"><span class="tick">✓</span><span>بیش از ۳۸ سال تجربه و اعتماد در شمال تهران</span></div>
-        <div class="benefit"><span class="tick">✓</span><span>شبکهٔ خریداران و مستأجران معتبر، شامل سفارت‌خانه‌ها و شرکت‌های خارجی</span></div>
+        <div class="benefit"><span class="tick">✓</span><span>بیش از ۳۸ سال تجربه و اعتماد (از سال ۱۳۶۷)</span></div>
+        <div class="benefit"><span class="tick">✓</span><span>شبکهٔ خریداران و مستأجران معتبر در سراسر ایران، شامل سفارت‌خانه‌ها و شرکت‌های خارجی</span></div>
         <div class="benefit"><span class="tick">✓</span><span>عکاسی حرفه‌ای و معرفی در سایت، اینستاگرام و دیوار</span></div>
         <div class="benefit"><span class="tick">✓</span><span>تنظیم قرارداد رسمی و دریافت کد رهگیری</span></div>
         <div class="benefit"><span class="tick">✓</span><span>محرمانگی کامل اطلاعات و آدرس شما</span></div>
@@ -211,8 +209,8 @@ footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(2
         <h4>بعد از ثبت چه می‌شود؟</h4>
         <div class="mp"><span class="n">۱</span><span>کارشناسی و قیمت‌گذاری رایگان</span></div>
         <div class="mp"><span class="n">۲</span><span>بازدید و عکاسی حرفه‌ای</span></div>
-        <div class="mp"><span class="n">۳</span><span>انتشار و بازاریابی ملک</span></div>
-        <div class="mp"><span class="n">۴</span><span>معرفی متقاضیان واجد شرایط</span></div>
+        <div class="mp"><span class="n">۳</span><span>بررسی و تأیید توسط مدیریت</span></div>
+        <div class="mp"><span class="n">۴</span><span>انتشار و معرفی به متقاضیان واجد شرایط</span></div>
       </div>
     </aside>
   </div>
@@ -220,7 +218,7 @@ footer .brand__fa{color:var(--ivory)} footer small{font-size:12.5px;color:rgba(2
 
 <footer><div class="wrap">
   <a class="brand" href="art-direction.html"><svg class="mark mark--rev" viewBox="0 0 120 120"><rect class="mk-sq" x="4" y="4" width="112" height="112" rx="12"/><rect class="mk-fr" x="13" y="13" width="94" height="94" rx="7" fill="none" stroke-width="1.4"/><path class="mk-one" d="M69 30 L69 84 L80 84 L80 92 L40 92 L40 84 L55 84 L55 47 L41 52 Z"/></svg><span class="brand__fa">انتخاب اول</span></a>
-  <small style="direction:ltr">۰۲۱-۲۲۰۴-۱۲۱۲ · property@firstchoiceco.com · firstchoiceco.com</small>
+  <small style="direction:ltr">۰۲۱-۲۲۰۴-۱۲۱۲ · نمابر ۰۲۱-۲۶۲۰-۱۶۳۵ · property@firstchoiceco.com · firstchoiceco.com</small>
   <small>© انتخاب اول · First Choice Real Estate — ۱۴۰۵</small>
 </div></footer>
 
