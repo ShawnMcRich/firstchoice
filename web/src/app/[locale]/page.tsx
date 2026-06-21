@@ -5,7 +5,7 @@ import { isLocale } from "@/i18n/config";
 import { getFeatured } from "@/lib/listings";
 import { ListingCard } from "@/components/ListingCard";
 
-const HERO_IMG = "/img/tehran-tower.webp";
+const HERO_IMG = "/img/pars-tower.webp";
 const FEATURED_IMG = [
   "https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=800&q=62&auto=format&fit=crop",
   "https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?auto=compress&cs=tinysrgb&w=800",
