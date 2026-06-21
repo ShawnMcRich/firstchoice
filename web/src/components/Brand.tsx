@@ -25,7 +25,7 @@ export function Brand({
         {/* the "1" */}
         <path className="mk-one" d="M69 30 L69 84 L80 84 L80 92 L40 92 L40 84 L55 84 L55 47 L41 52 Z" />
         {/* ordinal "st" */}
-        <text className="mk-st" x="86" y="39" fontSize="17" fontWeight="700">st</text>
+        <text className="mk-st" x="81" y="42" fontSize="18" fontWeight="700">st</text>
         {/* CHOICE ribbon across the 1 (swallowtail ends, no protruding wings) */}
         <polygon className="mk-rb" points="18,60 102,60 96,69 102,78 18,78 24,69" />
         <text className="mk-ch" x="60" y="73.5" textAnchor="middle" fontSize="12.5" fontWeight="800" letterSpacing="1.6">CHOICE</text>

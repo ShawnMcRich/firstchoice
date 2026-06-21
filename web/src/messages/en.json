@@ -33,7 +33,6 @@
     "items": [
       { "t": "Apartments for sale", "d": "All apartments for sale" },
       { "t": "Apartments to rent", "d": "Rentals & deposits" },
-      { "t": "Short-term & furnished", "d": "Furnished, short-stay rentals" },
       { "t": "Villas for sale", "d": "All villas for sale" },
       { "t": "Villas to rent", "d": "All villa rentals" },
       { "t": "Shop rentals", "d": "Retail & commercial units" },

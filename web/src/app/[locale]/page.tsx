@@ -7,9 +7,9 @@ import { ListingCard } from "@/components/ListingCard";
 
 const HERO_IMG = "/img/pars-tower.webp";
 const FEATURED_IMG = [
-  "https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=800&q=62&auto=format&fit=crop",
-  "https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.unsplash.com/photo-1612965607446-25e1332775ae?w=800&q=62&auto=format&fit=crop",
+  "/img/placeholders/apartment.webp",
+  "/img/placeholders/tower.webp",
+  "/img/placeholders/penthouse.webp",
 ];
 
 export const revalidate = 300;
