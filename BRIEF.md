@@ -16,12 +16,12 @@ Last updated: 2026-06-21 · Status: pre-build (art direction for approval)
 ## 2. Vision & principles (non-negotiable)
 - **Premium, editorial — no "AI slop."** Restraint, generous whitespace, real photography, crafted detail. Explicitly banned: purple/violet "tech" gradients, glassmorphism-everywhere, floating 3D blobs, emoji icons, default `rounded-xl + drop-shadow` shadcn look, bouncy spring animation, fake stock-photo vibe, machine-translated copy.
 - **Amazingly fast** — see budgets in §10.
-- **Bilingual EN + FA**, true RTL, full content parity (not a translation afterthought).
+- **Trilingual — فارسی + English + العربية (Arabic)**, true RTL for FA & AR, full content parity (not a translation afterthought). *(Arabic added per owner — serves Arab missions & GCC investors.)*
 - **Best-in-class UX**, mobile-first, super user-friendly.
 
 ## 3. Audiences
 1. **Local** buyers / renters / sellers (Tehran) — Persian-first.
-2. **Diplomatic missions, consulates, international companies** — English-first flagship.
+2. **Diplomatic missions, consulates, international companies** — English-first flagship (Arabic for Arab missions & GCC).
 3. **Iranian diaspora & foreign investors** buying/leasing in Tehran — English.
 
 ## 4. Brand
@@ -43,8 +43,8 @@ All three goals are in scope; phased so we ship something impeccably premium **f
 - **Neighborhood landing pages** (top ~8 areas) — SEO + expat-useful.
 - **International / Diplomatic Relocation** flagship section (EN-first) + private enquiry.
 - **سپردن ملک** submission wizard → moderation queue.
-- Agent dashboard: listing CRUD with image-normalization pipeline, moderation queue, per-agent **leads inbox** + status tracker.
-- Trust: about/heritage, team, contact + **Neshan map**, seal placeholders (اینماد / ساماندهی / اتحادیه املاک).
+- Agent/admin dashboard: listing CRUD with image-normalization pipeline; **moderation — both agents AND the public submit listings/files → owner (admin) approves before publish**; **People CRM: browse & search every contact by role — customers, tenants, owners, landlords — with details & history**; per-agent **leads inbox** + status tracker.
+- Trust: **About page with Dariush Ghanizadeh's photo & 20-year story** (personal brand — he's led with this for years; `design/about.html`), team, contact + **Neshan map**. **No certificate/trust-seal icons** (Enamad/نماد, Samandehi, union badges) — owner explicitly declined.
 - SEO core: schema, hreflang, sitemaps, **OG link previews**, Search Console; self-hosted analytics; **Turnstile** (not reCAPTCHA). Performance budgets enforced.
 
 **Phase 2 — Content & growth**
@@ -65,7 +65,7 @@ Home · Listings (خرید / رهن و اجاره / رهن کامل) · Listing 
 - **Shamsi (Jalali) calendar** on the FA side; Gregorian on EN. (Mandatory.)
 - **Gorgeous OG link previews** — Iran's sharing runs on WhatsApp/Telegram/Instagram; a shared listing must render as a premium card.
 - **Heritage/longevity story** ("از سال ۱۳۸۳ · 20+ years") as a trust pillar.
-- **Union & license display** (عضویت اتحادیه املاک، جواز کسب، کد رهگیری).
+- ~~Union/trust-badge display~~ — **owner declined certificate icons** (Enamad/نماد, Samandehi, union). کد رهگیری stays an operational contract step, not a badge.
 - Toman/Rial + Persian-numeral toggle; **multi-currency** (USD/EUR) for international.
 - Domestic messenger fallbacks (Eitaa/Bale) beside WhatsApp/Telegram.
 - Image-normalization pipeline (fixed aspect ratios, auto-crop, min-resolution gate) so mixed pro + phone photos stay cohesive.
@@ -95,7 +95,7 @@ WCAG **AA**; full keyboard + RTL/LTR; privacy / terms / cookie notice (EU diplom
 - Current FA filtering status (WhatsApp / Telegram / Instagram) + domestic fallbacks.
 - Premium Persian **display font** licensing.
 - **Photography plan** (pro for hero/featured; quality gate for mixed uploads).
-- **Enamad (اینماد) + Samandehi (ساماندهی) + اتحادیه** registration.
+- ~~Enamad / Samandehi / union seal registration~~ — **owner declined** certificate icons on the site.
 - Real listing **data source / migration** (current Divar/Instagram inventory?).
 
 ## 13. Next steps
