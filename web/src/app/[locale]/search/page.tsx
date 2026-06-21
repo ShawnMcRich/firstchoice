@@ -11,6 +11,7 @@ const TX_TABS = [
   { v: "", fa: "همه", en: "All", ar: "الكل" },
   { v: "sale", fa: "خرید", en: "Buy", ar: "شراء" },
   { v: "rent", fa: "رهن و اجاره", en: "Rent", ar: "إيجار" },
+  { v: "shortTerm", fa: "اجارهٔ کوتاه‌مدت", en: "Short-term", ar: "إيجار قصير" },
   { v: "fullDeposit", fa: "رهن کامل", en: "Full deposit", ar: "رهن كامل" },
   { v: "swap", fa: "معاوضه", en: "Swap", ar: "مقايضة" },
   { v: "partnership", fa: "مشارکت در ساخت", en: "Partnership", ar: "مشاركة" },

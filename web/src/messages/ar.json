@@ -33,6 +33,7 @@
     "items": [
       { "t": "شقق للبيع", "d": "جميع الشقق المعروضة للبيع" },
       { "t": "شقق للإيجار", "d": "إيجار ورهن" },
+      { "t": "إيجار قصير ومفروش", "d": "وحدات مفروشة لإقامة قصيرة" },
       { "t": "فلل للبيع", "d": "جميع الفلل للبيع" },
       { "t": "فلل للإيجار", "d": "جميع الفلل للإيجار" },
       { "t": "إيجار محلات", "d": "وحدات تجارية ومحلات" },
@@ -55,7 +56,7 @@
   "diplomatic": {
     "eyebrow": "الخدمات الدولية",
     "title": "إسكان الدبلوماسيين والسفارات والشركات الأجنبية",
-    "en": "Discreet, fully-managed home-finding for diplomatic missions and international companies in Tehran.",
+    "en": "Dedicated, fully-managed home-finding for diplomatic missions and international companies in Tehran.",
     "items": [
       "إيجارات مفروشة وقصيرة الأجل",
       "عقود بالإنجليزية والتفاوض على الشروط",
@@ -83,6 +84,8 @@
   "contact": {
     "phone": "٠٢١-٢٢٠٤-١٢١٢",
     "phoneHref": "+982122041212",
+    "mobile": "٠٩١٢-١٠٨-١٢١٢",
+    "mobileHref": "+989121081212",
     "faxLabel": "فاكس",
     "fax": "٠٢١-٢٦٢٠-١٦٣٥",
     "email": "property@firstchoiceco.com",

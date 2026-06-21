@@ -9,7 +9,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
       <div className="wrap">
         <div className="foot">
           <div>
-            <Brand href={`/${locale}`} reversed />
+            <Brand href={`/${locale}`} locale={locale} reversed />
             <p className="foot__intro">{dict.footer.tagline}</p>
           </div>
           <div>

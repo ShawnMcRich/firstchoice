@@ -3,6 +3,7 @@
 export const transactionTypeOptions = [
   { label: "فروش", value: "sale" },
   { label: "رهن و اجاره", value: "rent" },
+  { label: "اجارهٔ کوتاه‌مدت", value: "shortTerm" },
   { label: "رهن کامل", value: "fullDeposit" },
   { label: "معاوضه", value: "swap" },
   { label: "مشارکت در ساخت", value: "partnership" },

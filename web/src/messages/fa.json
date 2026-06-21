@@ -33,6 +33,7 @@
     "items": [
       { "t": "آپارتمان فروشی", "d": "همهٔ آپارتمان‌های فروشی" },
       { "t": "آپارتمان اجاره‌ای", "d": "رهن و اجارهٔ آپارتمان" },
+      { "t": "اجارهٔ کوتاه‌مدت", "d": "املاک مبله و کوتاه‌مدت" },
       { "t": "ویلا فروشی", "d": "تمامی ویلاهای فروشی" },
       { "t": "ویلا اجاره‌ای", "d": "کلیهٔ ویلاهای اجاره‌ای" },
       { "t": "اجاره مغازه", "d": "واحدهای تجاری و مغازه" },
@@ -55,7 +56,7 @@
   "diplomatic": {
     "eyebrow": "خدمات بین‌الملل",
     "title": "اسکان دیپلمات‌ها، سفارت‌خانه‌ها و شرکت‌های خارجی",
-    "en": "Discreet, fully-managed home-finding for diplomatic missions and international companies in Tehran.",
+    "en": "Dedicated, fully-managed home-finding for diplomatic missions and international companies in Tehran.",
     "items": [
       "اجارهٔ کوتاه‌مدت و املاک مبله",
       "تنظیم قرارداد انگلیسی و مذاکرهٔ شرایط",
@@ -83,6 +84,8 @@
   "contact": {
     "phone": "۰۲۱-۲۲۰۴-۱۲۱۲",
     "phoneHref": "+982122041212",
+    "mobile": "۰۹۱۲-۱۰۸-۱۲۱۲",
+    "mobileHref": "+989121081212",
     "faxLabel": "نمابر",
     "fax": "۰۲۱-۲۶۲۰-۱۶۳۵",
     "email": "property@firstchoiceco.com",
