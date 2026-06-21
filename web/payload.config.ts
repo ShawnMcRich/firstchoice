@@ -35,7 +35,7 @@ export default buildConfig({
   },
   // Local dev falls back to a SQLite file; production uses Postgres via DATABASE_URI.
   db: databaseUri.startsWith("postgres")
-    ? postgresAdapter({ pool: { connectionString: databaseUri } })
+    ? postgresAdapter({ push: true, pool: { connectionString: databaseUri } })
     : sqliteAdapter({ client: { url: databaseUri || "file:./firstchoice.db" } }),
   sharp,
 });
