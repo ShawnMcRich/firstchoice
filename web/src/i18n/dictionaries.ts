@@ -3,7 +3,7 @@ import type { Locale } from "./config";
 
 export interface Dictionary {
   meta: { homeTitle: string; homeDesc: string };
-  nav: { buy: string; rent: string; shortTerm: string; areas: string; intl: string; about: string; submit: string; consult: string };
+  nav: { buy: string; rent: string; shortTerm: string; areas: string; intl: string; about: string; submit: string; request: string; consult: string };
   hero: {
     eyebrow: string; motto: string; title: string; titleEm: string; titleAfter: string; en: string; lead: string;
     tabs: { buy: string; rent: string; full: string };

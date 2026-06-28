@@ -16,6 +16,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
     <>
       <Link href={`/${locale}/search?transactionType=rent`}>{dict.nav.rent}</Link>
       <Link href={`/${locale}/search?transactionType=shortTerm`}>{dict.nav.shortTerm}</Link>
+      <Link href={`/${locale}/request`}>{dict.nav.request}</Link>
       <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
       <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
     </>
@@ -23,7 +24,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
     <>
       <Link href={`/${locale}/search`}>{dict.nav.buy}</Link>
       <Link href={`/${locale}/search`}>{dict.nav.rent}</Link>
-      <Link href={`/${locale}/search`}>{dict.nav.areas}</Link>
+      <Link href={`/${locale}/request`}>{dict.nav.request}</Link>
       <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
       <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
     </>
@@ -38,6 +39,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
         <Brand href={`/${locale}`} locale={locale} />
         <nav className="menu">{links}</nav>
         <div className="nav__right">
+          <Link className="nav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
           <div className="nav__tels">
             <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
               <PhoneIcon />
@@ -58,6 +60,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
             <summary aria-label={dict.nav.consult}><span className="burger" /></summary>
             <div className="mnav__panel">
               <nav className="mnav__links">{links}</nav>
+              <Link className="nav__cta mnav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
               <div className="mnav__tel">
                 <a href={`tel:${tel}`}><PhoneIcon />{num(telLabel)}</a>
                 <a href={`tel:${dict.contact.mobileHref}`}><PhoneIcon />{num(dict.contact.mobile)}</a>

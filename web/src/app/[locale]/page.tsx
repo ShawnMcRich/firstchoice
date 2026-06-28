@@ -89,6 +89,23 @@ function TypeIcon({ k }: { k: string }) {
   );
 }
 
+// SEO neighborhood-link blocks (like delta.ir) — premium north-Tehran areas.
+const TEHRAN: Record<string, string> = { fa: "تهران", en: "Tehran", ar: "طهران" };
+const SEO: Record<string, { title: string; tx: string; hoods: string[] }[]> = {
+  fa: [
+    { title: "خرید ملک در", tx: "sale", hoods: ["جردن", "سعادت‌آباد", "ظفر", "شهرک غرب", "میرداماد", "الهیه", "قیطریه", "ونک", "زعفرانیه", "مرزداران", "پاسداران", "دروس", "ولنجک", "فرمانیه", "نیاوران", "امانیه"] },
+    { title: "اجاره ملک در", tx: "rent", hoods: ["جردن", "ظفر", "میرداماد", "ونک", "نیاوران", "ولنجک", "زعفرانیه", "الهیه", "فرمانیه", "قیطریه", "پاسداران", "دروس", "امانیه", "سعادت‌آباد", "شهرک غرب", "اندرزگو"] },
+  ],
+  en: [
+    { title: "Rentals in", tx: "rent", hoods: ["Jordan", "Elahieh", "Zaferanieh", "Niavaran", "Farmanieh", "Velenjak", "Qeytarieh", "Pasdaran", "Darrous", "Vanak", "Mirdamad", "Amanieh", "Saadat Abad", "Andarzgou", "Mahmoudieh", "Zafar"] },
+    { title: "Short-term stays in", tx: "shortTerm", hoods: ["Jordan", "Elahieh", "Zaferanieh", "Niavaran", "Farmanieh", "Velenjak", "Qeytarieh", "Vanak"] },
+  ],
+  ar: [
+    { title: "إيجار في", tx: "rent", hoods: ["جردن", "الهیه", "زعفرانیه", "نیاوران", "فرمانیه", "ولنجک", "قیطریه", "پاسداران", "دروس", "ونک", "میرداماد", "امانیه", "سعادت‌آباد", "اندرزگو"] },
+    { title: "إقامات قصيرة في", tx: "shortTerm", hoods: ["جردن", "الهیه", "زعفرانیه", "نیاوران", "فرمانیه", "ولنجک"] },
+  ],
+};
+
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
@@ -96,6 +113,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const featured = await getFeatured(locale);
   const L = (p: string) => `/${locale}${p}`;
   const hx = HERO[locale] ?? HERO.fa;
+  const seo = SEO[locale] ?? SEO.fa;
+  const tehran = TEHRAN[locale] ?? "تهران";
 
   return (
     <>
@@ -121,6 +140,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               <input type="text" name="q" placeholder={t.hero.searchPlaceholder} aria-label={t.hero.search} />
               <button className="btn btn--brass" type="submit">{t.hero.search}</button>
             </form>
+          </div>
+          <div className="phero__cta">
+            <Link className="btn btn--brass" href={L("/submit")}>{t.nav.submit}</Link>
+            <Link className="btn btn--lite" href={L("/request")}>{t.nav.request}</Link>
           </div>
           <div className="ptypes">
             {hx.types.map((ty) => (
@@ -202,6 +225,22 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <img src="/img/tehran-aerial.webp" alt="" />
         <div className="wrap">
           <p>{BAND[locale]}</p>
+        </div>
+      </section>
+
+      {/* SEO neighborhood links (delta-style) */}
+      <section className="seo">
+        <div className="wrap">
+          {seo.map((b) => (
+            <div className="seo__block" key={b.title}>
+              <h3 className="seo__h">{b.title} <span>{tehran}</span></h3>
+              <div className="seo__links">
+                {b.hoods.map((h) => (
+                  <Link key={h} href={L(`/search?transactionType=${b.tx}&q=${encodeURIComponent(h)}`)}>{b.title} {h}</Link>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
