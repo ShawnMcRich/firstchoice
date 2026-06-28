@@ -3,9 +3,9 @@ import type { Locale } from "./config";
 
 export interface Dictionary {
   meta: { homeTitle: string; homeDesc: string };
-  nav: { buy: string; rent: string; areas: string; intl: string; about: string; submit: string; consult: string };
+  nav: { buy: string; rent: string; shortTerm: string; areas: string; intl: string; about: string; submit: string; consult: string };
   hero: {
-    eyebrow: string; title: string; titleEm: string; titleAfter: string; en: string; lead: string;
+    eyebrow: string; motto: string; title: string; titleEm: string; titleAfter: string; en: string; lead: string;
     tabs: { buy: string; rent: string; full: string };
     searchPlaceholder: string; search: string; citiesLabel: string; tag: string;
   };
@@ -18,7 +18,7 @@ export interface Dictionary {
   diplomatic: { eyebrow: string; title: string; en: string; items: string[]; cta: string };
   trust: { stats: { n: string; l: string }[]; statement: string; aboutCta: string };
   footer: { tagline: string; services: string; areas: string; contactT: string; rights: string };
-  contact: { phone: string; phoneHref: string; mobile: string; mobileHref: string; faxLabel: string; fax: string; email: string; web: string; address: string; postal: string };
+  contact: { phones: string[]; phoneHrefs: string[]; mobile: string; mobileHref: string; faxLabel: string; fax: string; emails: string[]; web: string; address: string; postal: string };
 }
 
 const dictionaries = {

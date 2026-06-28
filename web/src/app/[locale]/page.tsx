@@ -32,7 +32,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       {/* hero */}
       <section className="hero">
         <div className="hero__text">
-          <span className="eyebrow">{t.hero.eyebrow}</span>
+          <p className="hero__motto">{t.hero.motto}</p>
           <h1>
             {t.hero.title}
             <br />
@@ -137,21 +137,23 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* diplomatic teaser */}
-      <section className="diplo">
-        <div className="wrap">
-          <span className="eyebrow">{t.diplomatic.eyebrow}</span>
-          <h2 className="h2" style={{ color: "var(--ivory)", margin: "18px 0 14px", maxWidth: "22ch" }}>
-            {t.diplomatic.title}
-          </h2>
-          <ul style={{ maxWidth: "60ch" }}>
-            {t.diplomatic.items.map((it) => (
-              <li key={it}>{it}</li>
-            ))}
-          </ul>
-          <Link className="btn btn--brass" href={L("/diplomatic")}>{t.diplomatic.cta}</Link>
-        </div>
-      </section>
+      {/* diplomatic teaser — foreigners only; hidden on the Persian home */}
+      {locale !== "fa" && (
+        <section className="diplo">
+          <div className="wrap">
+            <span className="eyebrow">{t.diplomatic.eyebrow}</span>
+            <h2 className="h2" style={{ color: "var(--ivory)", margin: "18px 0 14px", maxWidth: "22ch" }}>
+              {t.diplomatic.title}
+            </h2>
+            <ul style={{ maxWidth: "60ch" }}>
+              {t.diplomatic.items.map((it) => (
+                <li key={it}>{it}</li>
+              ))}
+            </ul>
+            <Link className="btn btn--brass" href={L("/diplomatic")}>{t.diplomatic.cta}</Link>
+          </div>
+        </section>
+      )}
 
       {/* Tehran atmospheric band */}
       <section className="tehranband">

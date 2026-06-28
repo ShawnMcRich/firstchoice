@@ -56,6 +56,8 @@ export default async function SearchPage({
 
   const t = await getDictionary(locale);
   const sx = SX[locale];
+  // Foreign-language visitors only see rental/short-term options.
+  const tabs = locale === "fa" ? TX_TABS : TX_TABS.filter((tab) => ["", "rent", "shortTerm", "fullDeposit"].includes(tab.v));
   const results = await searchListings({ transactionType: transactionType || undefined, q: q || undefined }, locale);
 
   const tabHref = (v: string) => {
@@ -76,7 +78,7 @@ export default async function SearchPage({
 
         <div className="fbar">
           <div className="fbar__tabs">
-            {TX_TABS.map((tab) => (
+            {tabs.map((tab) => (
               <Link key={tab.v} href={tabHref(tab.v)} className={transactionType === tab.v ? "on" : ""}>
                 {tab[locale]}
               </Link>

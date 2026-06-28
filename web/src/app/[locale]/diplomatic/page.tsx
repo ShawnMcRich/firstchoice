@@ -205,7 +205,7 @@ export default async function DiplomaticPage({
               <h2>{d.enqTitle}</h2>
               <p>{d.enqText}</p>
               <div className="contactline">
-                <b>property@firstchoiceco.com</b>
+                <b>tehranfirstchoice@gmail.com</b> · <b>property@firstchoiceco.com</b>
                 <br />
                 <b>+98 21 2204 1212</b> · +98 912 108 1212
               </div>

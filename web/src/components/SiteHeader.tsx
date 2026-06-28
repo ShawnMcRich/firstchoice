@@ -10,7 +10,16 @@ const PhoneIcon = () => (
 );
 
 export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary }) {
-  const links = (
+  // Foreign-language visitors (en/ar) are rentals/relocation focused — no buy/sell.
+  const foreign = locale !== "fa";
+  const links = foreign ? (
+    <>
+      <Link href={`/${locale}/search?transactionType=rent`}>{dict.nav.rent}</Link>
+      <Link href={`/${locale}/search?transactionType=shortTerm`}>{dict.nav.shortTerm}</Link>
+      <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
+      <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
+    </>
+  ) : (
     <>
       <Link href={`/${locale}/search`}>{dict.nav.buy}</Link>
       <Link href={`/${locale}/search`}>{dict.nav.rent}</Link>
@@ -20,6 +29,8 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
     </>
   );
   const num = (n: string) => <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{n}</span>;
+  const tel = dict.contact.phoneHrefs[0];
+  const telLabel = dict.contact.phones[0];
 
   return (
     <header className="nav">
@@ -28,9 +39,9 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
         <nav className="menu">{links}</nav>
         <div className="nav__right">
           <div className="nav__tels">
-            <a className="nav__tel" href={`tel:${dict.contact.phoneHref}`} aria-label={dict.nav.consult}>
+            <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
               <PhoneIcon />
-              {num(dict.contact.phone)}
+              {num(telLabel)}
             </a>
             <a className="nav__tel nav__tel--mob" href={`tel:${dict.contact.mobileHref}`} aria-label={dict.nav.consult}>
               {num(dict.contact.mobile)}
@@ -48,7 +59,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
             <div className="mnav__panel">
               <nav className="mnav__links">{links}</nav>
               <div className="mnav__tel">
-                <a href={`tel:${dict.contact.phoneHref}`}><PhoneIcon />{num(dict.contact.phone)}</a>
+                <a href={`tel:${tel}`}><PhoneIcon />{num(telLabel)}</a>
                 <a href={`tel:${dict.contact.mobileHref}`}><PhoneIcon />{num(dict.contact.mobile)}</a>
               </div>
             </div>

@@ -164,7 +164,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <h2>{c.ctaTitle}</h2>
           <p>{c.ctaText}</p>
           <a className="btn btn--brass" href={`tel:${PHONE}`}>{c.phone}</a>
-          <div className="contact">property@firstchoiceco.com · firstchoiceco.com</div>
+          <div className="contact">tehranfirstchoice@gmail.com · property@firstchoiceco.com</div>
         </div>
       </section>
     </>

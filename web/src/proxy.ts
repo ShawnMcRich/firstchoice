@@ -10,8 +10,14 @@ export function proxy(req: NextRequest) {
   );
   if (hasLocale) return;
 
+  // Geo default: visitors inside Iran get Persian; everyone else gets English.
+  // Cloudflare provides the country via the CF-IPCountry header (proxied origin).
+  const country = req.headers.get("cf-ipcountry")?.toUpperCase();
+  const insideIran = !country || country === "IR" || country === "XX" || country === "T1";
+  const locale = insideIran ? defaultLocale : "en";
+
   const url = req.nextUrl.clone();
-  url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
+  url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
   return NextResponse.redirect(url);
 }
 

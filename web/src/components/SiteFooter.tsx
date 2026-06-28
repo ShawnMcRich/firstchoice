@@ -14,10 +14,21 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
           </div>
           <div>
             <h6>{dict.footer.services}</h6>
-            <Link href={`/${locale}/search`}>{dict.nav.buy}</Link>
-            <Link href={`/${locale}/search`}>{dict.nav.rent}</Link>
-            <Link href={`/${locale}/submit`}>{dict.nav.submit}</Link>
-            <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
+            {locale === "fa" ? (
+              <>
+                <Link href={`/${locale}/search`}>{dict.nav.buy}</Link>
+                <Link href={`/${locale}/search`}>{dict.nav.rent}</Link>
+                <Link href={`/${locale}/submit`}>{dict.nav.submit}</Link>
+                <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
+              </>
+            ) : (
+              <>
+                <Link href={`/${locale}/search?transactionType=rent`}>{dict.nav.rent}</Link>
+                <Link href={`/${locale}/search?transactionType=shortTerm`}>{dict.nav.shortTerm}</Link>
+                <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
+                <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
+              </>
+            )}
           </div>
           <div>
             <h6>{dict.footer.areas}</h6>
@@ -29,9 +40,16 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             <h6>{dict.footer.contactT}</h6>
             <p>{dict.contact.address}</p>
             <p>{dict.contact.postal}</p>
-            <a href={`tel:${dict.contact.phoneHref}`}><span dir="ltr" style={{ unicodeBidi: "isolate" }}>{dict.contact.phone}</span></a>
+            {dict.contact.phones.map((p, i) => (
+              <a key={p} href={`tel:${dict.contact.phoneHrefs[i] ?? dict.contact.phoneHrefs[0]}`}>
+                <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{p}</span>
+              </a>
+            ))}
+            <a href={`tel:${dict.contact.mobileHref}`}><span dir="ltr" style={{ unicodeBidi: "isolate" }}>{dict.contact.mobile}</span></a>
             <p>{dict.contact.faxLabel}: <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{dict.contact.fax}</span></p>
-            <a href={`mailto:${dict.contact.email}`}>{dict.contact.email}</a>
+            {dict.contact.emails.map((e) => (
+              <a key={e} href={`mailto:${e}`}>{e}</a>
+            ))}
             <a href={`https://${dict.contact.web}`}>{dict.contact.web}</a>
           </div>
         </div>

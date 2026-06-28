@@ -40,6 +40,7 @@ section{padding:clamp(60px,8vw,116px) 0}
 .brand__name{font-weight:800;font-size:24px;line-height:1.02;letter-spacing:-.01em;color:var(--ink);font-family:var(--fa)}
 .brand__name--en{font-family:var(--serif);letter-spacing:-.005em}
 .brand__sub{display:block;font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:10px;color:var(--accent);font-weight:600;margin-top:4px}
+.hero__motto{color:var(--accent);font-weight:700;font-size:clamp(14px,1.5vw,16.5px);line-height:1.5;max-width:32ch;margin-bottom:14px;padding-inline-start:14px;border-inline-start:2px solid var(--accent)}
 
 header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}

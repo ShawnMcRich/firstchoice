@@ -1,11 +1,12 @@
 {
   "meta": {
-    "homeTitle": "First Choice Real Estate | Buy, sell & rent across Iran",
-    "homeDesc": "First Choice Real Estate, since 1988 — buying, selling, renting, swaps and build-partnerships across Iran, with deep expertise in luxury north-Tehran property and diplomatic & corporate relocation."
+    "homeTitle": "First Choice Real Estate | Rentals & relocation in Tehran, Iran",
+    "homeDesc": "First Choice Real Estate, Tehran since 1988 — furnished rentals, short-term leases and full diplomatic & corporate relocation, with deep expertise in luxury north-Tehran homes for embassies and international companies."
   },
   "nav": {
     "buy": "Buy & sell",
-    "rent": "Rent",
+    "rent": "Rentals",
+    "shortTerm": "Short-term",
     "areas": "Neighborhoods",
     "intl": "Diplomatic",
     "about": "About",
@@ -14,16 +15,17 @@
   },
   "hero": {
     "eyebrow": "First Choice Real Estate · since 1988",
-    "title": "Iran’s finest properties,",
-    "titleEm": "your first choice",
+    "motto": "Let us be your FIRST CHOICE in Real Estate",
+    "title": "Your home in Tehran,",
+    "titleEm": "made effortless",
     "titleAfter": ".",
     "en": "بهترین املاک ایران — انتخاب اول شما.",
-    "lead": "Buying, selling, renting, swaps and build-partnerships across Iran — with particular expertise in luxury north-Tehran homes and relocation for embassies and international companies.",
-    "tabs": { "buy": "Buy", "rent": "Rent", "full": "Full deposit" },
-    "searchPlaceholder": "Province, city, neighborhood or ref…",
+    "lead": "Furnished rentals, short-term leases and full relocation for diplomats, embassies and international companies — across Tehran’s finest neighborhoods.",
+    "tabs": { "buy": "Rentals", "rent": "Short-term", "full": "Furnished" },
+    "searchPlaceholder": "City, neighborhood or area…",
     "search": "Search",
-    "citiesLabel": "Featured cities:",
-    "tag": "Zafaraniyeh · For sale · 210 m²"
+    "citiesLabel": "Popular areas:",
+    "tag": "Elahieh · Furnished rental · 210 m²"
   },
   "cities": ["Tehran", "Isfahan", "Mashhad", "Shiraz", "Tabriz", "Karaj"],
   "categories": {
@@ -31,14 +33,14 @@
     "title": "What we offer",
     "more": "View all",
     "items": [
-      { "t": "Apartments for sale", "d": "All apartments for sale" },
-      { "t": "Apartments to rent", "d": "Rentals & deposits" },
-      { "t": "Villas for sale", "d": "All villas for sale" },
-      { "t": "Villas to rent", "d": "All villa rentals" },
-      { "t": "Shop rentals", "d": "Retail & commercial units" },
-      { "t": "Swaps", "d": "All exchange listings" },
-      { "t": "Partnership land", "d": "Build-partnership plots" },
-      { "t": "Offices & commercial", "d": "Offices, towers, admin use" }
+      { "t": "Furnished apartments", "d": "Move-in-ready city homes" },
+      { "t": "Short-term & serviced", "d": "Flexible furnished stays" },
+      { "t": "Long-term rentals", "d": "Deposit & monthly leases" },
+      { "t": "Villas to rent", "d": "Private villas & gardens" },
+      { "t": "Embassy-belt homes", "d": "North-Tehran, near missions" },
+      { "t": "Penthouses to rent", "d": "Premium city-view homes" },
+      { "t": "Offices to rent", "d": "Commercial & admin space" },
+      { "t": "Diplomatic relocation", "d": "Handled end to end" }
     ]
   },
   "featured": {
@@ -47,9 +49,9 @@
     "more": "View all properties",
     "details": "Details",
     "items": [
-      { "loc": "Tehran · Zafaraniyeh", "title": "210 m² apartment with city view", "price": "32,000,000,000", "unit": "Toman", "badge": "For sale", "brass": "Featured", "specs": ["210 m²", "3 beds", "Floor 4"] },
-      { "loc": "Isfahan · Mardavij", "title": "185 m² apartment, fully equipped", "price": "14,500,000,000", "unit": "Toman", "badge": "For sale", "specs": ["185 m²", "3 beds", "Floor 6"] },
-      { "loc": "Tehran · Elahieh", "title": "320 m² penthouse, open to swap", "price": "85,000,000,000", "unit": "+ swap", "badge": "Swap", "specs": ["320 m²", "4 beds", "Floor 8"] }
+      { "loc": "Tehran · Elahieh", "title": "Furnished 210 m² apartment, city view", "price": "180,000,000", "unit": "Toman / mo", "badge": "Furnished rental", "brass": "Featured", "specs": ["210 m²", "3 beds", "Floor 4"] },
+      { "loc": "Tehran · Zafaraniyeh", "title": "Serviced 185 m² apartment", "price": "150,000,000", "unit": "Toman / mo", "badge": "Short-term", "specs": ["185 m²", "3 beds", "Floor 6"] },
+      { "loc": "Tehran · Farmanieh", "title": "320 m² penthouse, panoramic view", "price": "320,000,000", "unit": "Toman / mo", "badge": "Furnished rental", "specs": ["320 m²", "4 beds", "Floor 8"] }
     ]
   },
   "diplomatic": {
@@ -74,22 +76,22 @@
     "aboutCta": "About Dariush Ghanizadeh"
   },
   "footer": {
-    "tagline": "First Choice Real Estate — buying, selling, renting, swaps & partnerships across Iran, plus diplomatic relocation, since 1988.",
+    "tagline": "First Choice Real Estate — furnished rentals, short-term leases and diplomatic relocation in Tehran, since 1988.",
     "services": "Services",
     "areas": "Cities",
     "contactT": "Contact",
     "rights": "© First Choice Real Estate · انتخاب اول — 2026"
   },
   "contact": {
-    "phone": "+98 21 2204 1212",
-    "phoneHref": "+982122041212",
+    "phones": ["+98 21 2204 1212", "+98 21 2202 1616", "+98 21 2205 3232"],
+    "phoneHrefs": ["+982122041212", "+982122021616", "+982122053232"],
     "mobile": "+98 912 108 1212",
     "mobileHref": "+989121081212",
     "faxLabel": "Fax",
     "fax": "+98 21 2620 1635",
-    "email": "property@firstchoiceco.com",
+    "emails": ["tehranfirstchoice@gmail.com", "property@firstchoiceco.com"],
     "web": "firstchoiceco.com",
-    "address": "No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3, Tehran",
+    "address": "#24, E.Nahid St., Nelson Mandela (Jordan) Blvd, Tehran, Iran",
     "postal": "Postal code 1915684831"
   }
 }
