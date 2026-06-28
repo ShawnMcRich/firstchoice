@@ -33,6 +33,7 @@ section{padding:clamp(60px,8vw,116px) 0}
 .mark{width:48px;height:48px;flex:none}
 .mk-sq{fill:var(--brand)} .mk-fr{stroke:var(--accent)} .mk-one{fill:var(--ivory)}
 .mk-st{fill:var(--ivory);font-family:var(--serif)} .mk-rb{fill:var(--accent)} .mk-ch{fill:var(--ivory);font-family:var(--sans)}
+.mark text{direction:ltr;unicode-bidi:isolate}
 .mark--rev .mk-sq{fill:var(--ivory)} .mark--rev .mk-fr{stroke:var(--brand)} .mark--rev .mk-one{fill:var(--brand)}
 .mark--rev .mk-st{fill:var(--brand)} .mark--rev .mk-rb{fill:var(--brand)} .mark--rev .mk-ch{fill:var(--ivory)}
 .brand{display:flex;align-items:center;gap:13px}
