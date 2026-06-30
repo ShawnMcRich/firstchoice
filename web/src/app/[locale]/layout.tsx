@@ -50,7 +50,7 @@ const ORG_JSONLD = {
   areaServed: "IR",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "No. 24, East Nahid Blvd, Africa St (Jordan), Amanieh, District 3",
+    streetAddress: "#24, E.Nahid St., Nelson Mandela (Jordan) Blvd",
     addressLocality: "Tehran",
     postalCode: "1915684831",
     addressCountry: "IR",

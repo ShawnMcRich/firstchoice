@@ -44,10 +44,15 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
           <Brand href={`/${locale}`} locale={locale} />
           <div className="nav__right">
             <Link className="nav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
-            <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
-              <PhoneIcon />
-              {num(telLabel)}
-            </a>
+            <div className="nav__tels">
+              <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
+                <PhoneIcon />
+                {num(telLabel)}
+              </a>
+              <a className="nav__tel nav__tel--mob" href={`tel:${dict.contact.mobileHref}`} aria-label={dict.nav.consult}>
+                {num(dict.contact.mobile)}
+              </a>
+            </div>
             <span className="lang">
               {locales.map((l) => (
                 <Link key={l} href={`/${l}`} className={l === locale ? "on" : ""}>
