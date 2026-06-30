@@ -10,7 +10,6 @@ const PhoneIcon = () => (
 );
 
 export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary }) {
-  // Foreign-language visitors (en/ar) are rentals/relocation focused — no buy/sell.
   const foreign = locale !== "fa";
   const links = foreign ? (
     <>
@@ -19,14 +18,19 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
       <Link href={`/${locale}/request`}>{dict.nav.request}</Link>
       <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
       <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
+      <Link href={`/${locale}/contact`}>{dict.nav.contact}</Link>
     </>
   ) : (
     <>
-      <Link href={`/${locale}/search`}>{dict.nav.buy}</Link>
-      <Link href={`/${locale}/search`}>{dict.nav.rent}</Link>
+      <Link href={`/${locale}`}>{dict.nav.home}</Link>
+      <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
       <Link href={`/${locale}/request`}>{dict.nav.request}</Link>
       <Link href={`/${locale}/diplomatic`}>{dict.nav.intl}</Link>
-      <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
+      <Link href={`/${locale}/valuation`}>{dict.nav.valuation}</Link>
+      <Link href={`/${locale}/cooperation`}>{dict.nav.cooperation}</Link>
+      <Link href={`/${locale}/careers`}>{dict.nav.careers}</Link>
+      <Link href={`/${locale}/news`}>{dict.nav.news}</Link>
+      <Link href={`/${locale}/contact`}>{dict.nav.contact}</Link>
     </>
   );
   const num = (n: string) => <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{n}</span>;
@@ -40,15 +44,10 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
         <nav className="menu">{links}</nav>
         <div className="nav__right">
           <Link className="nav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
-          <div className="nav__tels">
-            <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
-              <PhoneIcon />
-              {num(telLabel)}
-            </a>
-            <a className="nav__tel nav__tel--mob" href={`tel:${dict.contact.mobileHref}`} aria-label={dict.nav.consult}>
-              {num(dict.contact.mobile)}
-            </a>
-          </div>
+          <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
+            <PhoneIcon />
+            {num(telLabel)}
+          </a>
           <span className="lang">
             {locales.map((l) => (
               <Link key={l} href={`/${l}`} className={l === locale ? "on" : ""}>

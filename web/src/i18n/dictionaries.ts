@@ -3,7 +3,7 @@ import type { Locale } from "./config";
 
 export interface Dictionary {
   meta: { homeTitle: string; homeDesc: string };
-  nav: { buy: string; rent: string; shortTerm: string; areas: string; intl: string; about: string; submit: string; request: string; consult: string };
+  nav: { home: string; buy: string; rent: string; shortTerm: string; areas: string; intl: string; about: string; submit: string; request: string; valuation: string; cooperation: string; careers: string; news: string; contact: string; consult: string };
   hero: {
     eyebrow: string; motto: string; title: string; titleEm: string; titleAfter: string; en: string; lead: string;
     tabs: { buy: string; rent: string; full: string };
@@ -17,7 +17,7 @@ export interface Dictionary {
   };
   diplomatic: { eyebrow: string; title: string; en: string; items: string[]; cta: string };
   trust: { stats: { n: string; l: string }[]; statement: string; aboutCta: string };
-  footer: { tagline: string; services: string; areas: string; contactT: string; rights: string };
+  footer: { tagline: string; intl: string; services: string; areas: string; contactT: string; rights: string };
   contact: { phones: string[]; phoneHrefs: string[]; mobile: string; mobileHref: string; faxLabel: string; fax: string; emails: string[]; web: string; address: string; postal: string };
 }
 

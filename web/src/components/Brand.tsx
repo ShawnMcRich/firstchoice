@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 
-const NAME: Record<Locale, string> = { fa: "انتخاب اول", en: "First Choice", ar: "الخيار الأول" };
+const NAME: Record<Locale, string> = { fa: "آژانس املاک انتخاب اول", en: "First Choice", ar: "الخيار الأول" };
 const SUB: Record<Locale, string> = {
   fa: "First Choice · Real Estate",
   en: "Real Estate · Tehran",

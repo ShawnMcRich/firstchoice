@@ -11,6 +11,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
           <div>
             <Brand href={`/${locale}`} locale={locale} reversed />
             <p className="foot__intro">{dict.footer.tagline}</p>
+            <p className="foot__intl">{dict.footer.intl}</p>
           </div>
           <div>
             <h6>{dict.footer.services}</h6>

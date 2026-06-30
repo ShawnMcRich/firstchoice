@@ -109,7 +109,7 @@ export async function getFeatured(locale: Locale, limit = 3): Promise<CardListin
 }
 
 export async function searchListings(
-  opts: { transactionType?: string; propertyType?: string; q?: string; limit?: number },
+  opts: { transactionType?: string; propertyType?: string; q?: string; province?: string; city?: string; neighborhood?: string; code?: string; limit?: number },
   locale: Locale,
 ): Promise<CardListing[]> {
   try {
@@ -117,7 +117,11 @@ export async function searchListings(
     const where: Where = { status: { equals: "published" } };
     if (opts.transactionType) where.transactionType = { equals: opts.transactionType };
     if (opts.propertyType) where.propertyType = { equals: opts.propertyType };
-    if (opts.q) where.or = [{ title: { like: opts.q } }, { city: { like: opts.q } }, { neighborhood: { like: opts.q } }];
+    if (opts.province) where.province = { like: opts.province };
+    if (opts.city) where.city = { like: opts.city };
+    if (opts.neighborhood) where.neighborhood = { like: opts.neighborhood };
+    if (opts.code) where.code = { like: opts.code };
+    if (opts.q) where.or = [{ title: { like: opts.q } }, { city: { like: opts.q } }, { neighborhood: { like: opts.q } }, { code: { like: opts.q } }];
     const res = await payload.find({
       collection: "listings",
       locale,

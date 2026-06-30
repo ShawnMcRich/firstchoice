@@ -15,9 +15,9 @@ type AboutContent = {
 const C: Record<Locale, AboutContent> = {
   fa: {
     eyebrow: "دربارهٔ ما · از سال ۱۳۶۷",
-    name: "داریوش غنی‌زاده",
+    name: "غنی‌زاده",
     role: "مدیریت · مشاورین املاک انتخاب اول",
-    bio: "داریوش غنی‌زاده، بنیان‌گذار و مدیر مشاورین املاک انتخاب اول، از سال ۱۳۶۷ در بازار املاک فعال است. با پروانهٔ رسمی مشاور املاک و نزدیک به چهار دهه تجربه، در کنار خانواده‌های ایرانی و نیز سفارت‌خانه‌ها و شرکت‌های خارجی، بر پایهٔ صداقت، شناخت دقیق بازار و رابطهٔ بلندمدت با مشتریان خدمت کرده است.",
+    bio: "غنی‌زاده، بنیان‌گذار و مدیر مشاورین املاک انتخاب اول، از سال ۱۳۶۷ در بازار املاک فعال است. با پروانهٔ رسمی مشاور املاک و نزدیک به چهار دهه تجربه، در کنار خانواده‌های ایرانی و نیز سفارت‌خانه‌ها و شرکت‌های خارجی، بر پایهٔ صداقت، شناخت دقیق بازار و رابطهٔ بلندمدت با مشتریان خدمت کرده است.",
     contactBtn: "تماس و مشاوره",
     viewBtn: "مشاهدهٔ املاک",
     storyEyebrow: "سخن مدیریت",
@@ -41,9 +41,9 @@ const C: Record<Locale, AboutContent> = {
   },
   en: {
     eyebrow: "About us · since 1988",
-    name: "Dariush Ghanizadeh",
+    name: "Ghanizadeh",
     role: "Founder & Manager · First Choice Real Estate",
-    bio: "Dariush Ghanizadeh, founder and manager of First Choice Real Estate, has worked in the property market since 1988. A licensed real-estate advisor with nearly four decades of experience, he has served Iranian families as well as embassies and international companies — on a foundation of honesty, deep market knowledge, and long-term relationships.",
+    bio: "Ghanizadeh, founder and manager of First Choice Real Estate, has worked in the property market since 1988. A licensed real-estate advisor with nearly four decades of experience, he has served Iranian families as well as embassies and international companies — on a foundation of honesty, deep market knowledge, and long-term relationships.",
     contactBtn: "Call & consult",
     viewBtn: "Browse properties",
     storyEyebrow: "From the management",
@@ -67,9 +67,9 @@ const C: Record<Locale, AboutContent> = {
   },
   ar: {
     eyebrow: "من نحن · منذ ١٩٨٨",
-    name: "داریوش غنی‌زاده",
+    name: "غنی‌زاده",
     role: "المؤسس والمدير · العقارية الخيار الأول",
-    bio: "داریوش غنی‌زاده، مؤسس ومدير العقارية الخيار الأول، يعمل في سوق العقارات منذ ١٩٨٨. مستشار عقاري مرخّص بخبرة تقارب أربعة عقود، خدم العائلات الإيرانية وكذلك السفارات والشركات الأجنبية — على أساس من الصدق والمعرفة الدقيقة بالسوق والعلاقات طويلة الأمد.",
+    bio: "غنی‌زاده، مؤسس ومدير العقارية الخيار الأول، يعمل في سوق العقارات منذ ١٩٨٨. مستشار عقاري مرخّص بخبرة تقارب أربعة عقود، خدم العائلات الإيرانية وكذلك السفارات والشركات الأجنبية — على أساس من الصدق والمعرفة الدقيقة بالسوق والعلاقات طويلة الأمد.",
     contactBtn: "اتصل واستشر",
     viewBtn: "تصفّح العقارات",
     storyEyebrow: "من الإدارة",

@@ -4,14 +4,20 @@
     "homeDesc": "First Choice Real Estate, Tehran since 1988 — furnished rentals, short-term leases and full diplomatic & corporate relocation, with deep expertise in luxury north-Tehran homes for embassies and international companies."
   },
   "nav": {
+    "home": "Home",
     "buy": "Buy & sell",
     "rent": "Rentals",
-    "shortTerm": "Short-term",
+    "shortTerm": "Monthly furnished",
     "areas": "Neighborhoods",
     "intl": "Diplomatic",
     "about": "About",
     "submit": "List property",
     "request": "Request a property",
+    "valuation": "Valuation",
+    "cooperation": "Cooperation",
+    "careers": "Careers",
+    "news": "Property news",
+    "contact": "Contact",
     "consult": "Contact"
   },
   "hero": {
@@ -70,14 +76,15 @@
   "trust": {
     "stats": [
       { "n": "38+", "l": "years (since 1988)" },
-      { "n": "1200+", "l": "successful deals" },
+      { "n": "Lawful", "l": "precise, official dealing" },
       { "n": "31", "l": "provinces, all Iran" }
     ],
     "statement": "Every deal handled with the care and trust you’ve known since 1988.",
-    "aboutCta": "About Dariush Ghanizadeh"
+    "aboutCta": "About Ghanizadeh"
   },
   "footer": {
-    "tagline": "First Choice Real Estate — furnished rentals, short-term leases and diplomatic relocation in Tehran, since 1988.",
+    "tagline": "With First Choice, you reach the right home faster.",
+    "intl": "Specialist international relocation",
     "services": "Services",
     "areas": "Cities",
     "contactT": "Contact",

@@ -26,28 +26,30 @@ type HeroTile = { label: string; icon: string; path: string };
 const HERO: Record<string, { tabs: { label: string; tx: string }[]; types: HeroTile[] }> = {
   fa: {
     tabs: [
-      { label: "خرید و فروش", tx: "sale" },
+      { label: "خرید", tx: "sale" },
       { label: "رهن و اجاره", tx: "rent" },
-      { label: "اجارهٔ کوتاه‌مدت", tx: "shortTerm" },
+      { label: "اجاره ماهانه مبله", tx: "shortTerm" },
+      { label: "معاوضه", tx: "swap" },
+      { label: "مشارکت", tx: "partnership" },
     ],
     types: [
       { label: "آپارتمان مسکونی", icon: "apartment", path: "/search?propertyType=apartment" },
       { label: "آپارتمان اداری", icon: "office", path: "/search?propertyType=officeDeed" },
       { label: "خانه و ویلا", icon: "villa", path: "/search?propertyType=villa" },
       { label: "مغازه و تجاری", icon: "shop", path: "/search?propertyType=shop" },
-      { label: "برج و مستغلات", icon: "tower", path: "/search?propertyType=tower" },
+      { label: "برج و پنت‌هاوس", icon: "tower", path: "/search?propertyType=penthouse" },
       { label: "زمین و کلنگی", icon: "land", path: "/search?propertyType=land" },
     ],
   },
   en: {
     tabs: [
       { label: "Rent", tx: "rent" },
-      { label: "Short-term", tx: "shortTerm" },
-      { label: "Furnished", tx: "rent" },
+      { label: "Monthly furnished", tx: "shortTerm" },
+      { label: "Villas", tx: "rent" },
     ],
     types: [
       { label: "Furnished apartments", icon: "apartment", path: "/search?propertyType=apartment" },
-      { label: "Short-term stays", icon: "clock", path: "/search?transactionType=shortTerm" },
+      { label: "Monthly furnished", icon: "clock", path: "/search?transactionType=shortTerm" },
       { label: "Villas to rent", icon: "villa", path: "/search?propertyType=villa" },
       { label: "Penthouses", icon: "tower", path: "/search?propertyType=penthouse" },
       { label: "Offices to rent", icon: "office", path: "/search?propertyType=officeDeed" },
@@ -57,12 +59,12 @@ const HERO: Record<string, { tabs: { label: string; tx: string }[]; types: HeroT
   ar: {
     tabs: [
       { label: "إيجار", tx: "rent" },
-      { label: "إيجار قصير", tx: "shortTerm" },
-      { label: "مفروش", tx: "rent" },
+      { label: "إيجار شهري مفروش", tx: "shortTerm" },
+      { label: "فلل", tx: "rent" },
     ],
     types: [
       { label: "شقق مفروشة", icon: "apartment", path: "/search?propertyType=apartment" },
-      { label: "إقامات قصيرة", icon: "clock", path: "/search?transactionType=shortTerm" },
+      { label: "إيجار شهري مفروش", icon: "clock", path: "/search?transactionType=shortTerm" },
       { label: "فلل للإيجار", icon: "villa", path: "/search?propertyType=villa" },
       { label: "بنتهاوس", icon: "tower", path: "/search?propertyType=penthouse" },
       { label: "مكاتب للإيجار", icon: "office", path: "/search?propertyType=officeDeed" },
@@ -136,10 +138,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 <Link key={tb.label} className={i === 0 ? "on" : ""} href={L(`/search?transactionType=${tb.tx}`)}>{tb.label}</Link>
               ))}
             </div>
-            <form className="psearch__row" action={L("/search")}>
-              <input type="text" name="q" placeholder={t.hero.searchPlaceholder} aria-label={t.hero.search} />
-              <button className="btn btn--brass" type="submit">{t.hero.search}</button>
-            </form>
           </div>
           <div className="phero__cta">
             <Link className="btn btn--brass" href={L("/submit")}>{t.nav.submit}</Link>
