@@ -39,33 +39,39 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
 
   return (
     <header className="nav">
-      <div className="wrap">
-        <Brand href={`/${locale}`} locale={locale} />
-        <nav className="menu">{links}</nav>
-        <div className="nav__right">
-          <Link className="nav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
-          <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
-            <PhoneIcon />
-            {num(telLabel)}
-          </a>
-          <span className="lang">
-            {locales.map((l) => (
-              <Link key={l} href={`/${l}`} className={l === locale ? "on" : ""}>
-                {localeNames[l]}
-              </Link>
-            ))}
-          </span>
-          <details className="mnav">
-            <summary aria-label={dict.nav.consult}><span className="burger" /></summary>
-            <div className="mnav__panel">
-              <nav className="mnav__links">{links}</nav>
-              <Link className="nav__cta mnav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
-              <div className="mnav__tel">
-                <a href={`tel:${tel}`}><PhoneIcon />{num(telLabel)}</a>
-                <a href={`tel:${dict.contact.mobileHref}`}><PhoneIcon />{num(dict.contact.mobile)}</a>
+      <div className="nav__top">
+        <div className="wrap">
+          <Brand href={`/${locale}`} locale={locale} />
+          <div className="nav__right">
+            <Link className="nav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
+            <a className="nav__tel" href={`tel:${tel}`} aria-label={dict.nav.consult}>
+              <PhoneIcon />
+              {num(telLabel)}
+            </a>
+            <span className="lang">
+              {locales.map((l) => (
+                <Link key={l} href={`/${l}`} className={l === locale ? "on" : ""}>
+                  {localeNames[l]}
+                </Link>
+              ))}
+            </span>
+            <details className="mnav">
+              <summary aria-label={dict.nav.consult}><span className="burger" /></summary>
+              <div className="mnav__panel">
+                <nav className="mnav__links">{links}</nav>
+                <Link className="nav__cta mnav__cta" href={`/${locale}/submit`}>{dict.nav.submit}</Link>
+                <div className="mnav__tel">
+                  <a href={`tel:${tel}`}><PhoneIcon />{num(telLabel)}</a>
+                  <a href={`tel:${dict.contact.mobileHref}`}><PhoneIcon />{num(dict.contact.mobile)}</a>
+                </div>
               </div>
-            </div>
-          </details>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div className="nav__bar">
+        <div className="wrap">
+          <nav className="menu">{links}</nav>
         </div>
       </div>
     </header>
